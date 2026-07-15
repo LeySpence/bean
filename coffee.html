@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#111111">
+    <meta name="description" content="Explore our curated collection of single-origin and blended coffees at Bean Boutique.">
+    <title>Our Coffee — Bean Boutique</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Switzer:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+</head>
+<body id="page-coffee">
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <header id="header" class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">
+                <img src="images/icons/logo.svg" alt="Bean Boutique Coffee Shop" width="36" height="36" loading="eager">
+                <span>Bean Boutique</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" type="button">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <nav id="nav" aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-links__link">Home</a></li>
+                    <li><a href="coffee.html" class="nav-links__link nav-links__link--active" aria-current="page">Coffee</a></li>
+                    <li><a href="equipment.html" class="nav-links__link">Equipment</a></li>
+                    <li><a href="events.html" class="nav-links__link">Events</a></li>
+                    <li><a href="offers.html" class="nav-links__link">Offers</a></li>
+                    <li><a href="cart.html" class="nav-links__link nav-links__link--cart">Cart <span id="cartCount" class="cart-count">0</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb__list">
+                    <li class="breadcrumb__item"><a href="index.html" class="breadcrumb__link">Home</a></li>
+                    <li class="breadcrumb__item breadcrumb__item--current" aria-current="page">Coffee</li>
+                </ol>
+            </div>
+        </nav>
+
+        <section id="page-header" class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">Our Coffee Selection</h1>
+                <p class="page-header__subtitle">Explore our carefully curated collection of single-origin and blended coffees from the world's finest growing regions.</p>
+            </div>
+        </section>
+
+        <section id="search-filter" class="search-filter" aria-label="Search and filter coffees">
+            <div class="container">
+                <div class="search-filter__bar">
+                    <div class="search-filter__search">
+                        <label for="coffee-search" class="sr-only">Search coffee products</label>
+                        <input type="text" id="coffee-search" class="search-filter__input" placeholder="Search by name, origin, or roast..." aria-label="Search coffee products" autocomplete="off">
+                        <button id="search-clear" class="search-filter__clear" aria-label="Clear search" type="button"><i class="ph-bold ph-x"></i></button>
+                    </div>
+                    <div class="search-filter__filters" role="group" aria-label="Filter by coffee type">
+                        <button class="filter-btn filter-btn--active" data-filter="all" aria-pressed="true" type="button">All</button>
+                        <button class="filter-btn" data-filter="single-origin" aria-pressed="false" type="button">Single Origin</button>
+                        <button class="filter-btn" data-filter="blend" aria-pressed="false" type="button">Blends</button>
+                        <button class="filter-btn" data-filter="decaf" aria-pressed="false" type="button">Decaf</button>
+                        <button class="filter-btn" data-filter="limited" aria-pressed="false" type="button">Limited Edition</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="coffee-grid" class="section" aria-label="Coffee products">
+            <div class="container">
+                <div id="search-results" class="product-grid">
+
+                    <article class="product-card reveal-child" data-product-id="coffee-001" data-category="single-origin">
+                        <figure class="product-card__figure">
+                            <img src="images/coffee/colombian-single.jpg" alt="Colombian Huila Single Origin coffee beans in a burlap sack" width="600" height="600" loading="lazy">
+                            <figcaption class="product-card__caption">Colombian Huila — Single Origin</figcaption>
+                        </figure>
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Colombian Huila Single Origin</h3>
+                            <p class="product-card__description">A smooth, well-balanced coffee from the Huila region with notes of dark chocolate and citrus.</p>
+                            <details class="product-card__details">
+                                <summary>Tasting Notes &amp; Brewing</summary>
+                                <ul class="product-card__notes">
+                                    <li><strong>Tasting Notes:</strong> Dark chocolate, citrus, smooth finish</li>
+                                    <li><strong>Roast Level:</strong> Medium</li>
+                                    <li><strong>Origin:</strong> Huila, Colombia</li>
+                                    <li><strong>Recommended Brewing:</strong> Pour-over, French Press</li>
+                                </ul>
+                            </details>
+                            <p class="product-card__price">&pound;12.50 <span class="product-card__unit">/ 250g</span></p>
+                            <button class="btn btn--primary btn--add-to-cart" type="button" data-product-id="coffee-001" data-name="Colombian Huila Single Origin" data-price="12.50" data-image="images/coffee/colombian-single.jpg" data-type="coffee">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card reveal-child" data-product-id="coffee-002" data-category="single-origin">
+                        <figure class="product-card__figure">
+                            <img src="images/coffee/ethiopian-yirgacheffe.jpg" alt="Ethiopian Yirgacheffe coffee beans with floral aroma" width="600" height="600" loading="lazy">
+                            <figcaption class="product-card__caption">Ethiopian Yirgacheffe — Single Origin</figcaption>
+                        </figure>
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Ethiopian Yirgacheffe</h3>
+                            <p class="product-card__description">Bright and floral with a wine-like acidity. A complex cup that reveals layers of berry and jasmine.</p>
+                            <details class="product-card__details">
+                                <summary>Tasting Notes &amp; Brewing</summary>
+                                <ul class="product-card__notes">
+                                    <li><strong>Tasting Notes:</strong> Blueberry, jasmine, wine-like acidity</li>
+                                    <li><strong>Roast Level:</strong> Light</li>
+                                    <li><strong>Origin:</strong> Yirgacheffe, Ethiopia</li>
+                                    <li><strong>Recommended Brewing:</strong> Pour-over, AeroPress</li>
+                                </ul>
+                            </details>
+                            <p class="product-card__price">&pound;14.00 <span class="product-card__unit">/ 250g</span></p>
+                            <button class="btn btn--primary btn--add-to-cart" type="button" data-product-id="coffee-002" data-name="Ethiopian Yirgacheffe" data-price="14.00" data-image="images/coffee/ethiopian-yirgacheffe.jpg" data-type="coffee">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card reveal-child" data-product-id="coffee-003" data-category="blend">
+                        <figure class="product-card__figure">
+                            <img src="images/coffee/espresso-blend.jpg" alt="Morning Rise Espresso Blend coffee beans" width="600" height="600" loading="lazy">
+                            <figcaption class="product-card__caption">Morning Rise — Espresso Blend</figcaption>
+                        </figure>
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Morning Rise Espresso Blend</h3>
+                            <p class="product-card__description">A bold, full-bodied blend crafted for the perfect morning espresso. Rich crema and caramel sweetness.</p>
+                            <details class="product-card__details">
+                                <summary>Tasting Notes &amp; Brewing</summary>
+                                <ul class="product-card__notes">
+                                    <li><strong>Tasting Notes:</strong> Caramel, toasted nuts, rich crema</li>
+                                    <li><strong>Roast Level:</strong> Dark</li>
+                                    <li><strong>Origin:</strong> Blend (Brazil, Guatemala, India)</li>
+                                    <li><strong>Recommended Brewing:</strong> Espresso, Moka Pot</li>
+                                </ul>
+                            </details>
+                            <p class="product-card__price">&pound;11.00 <span class="product-card__unit">/ 250g</span></p>
+                            <button class="btn btn--primary btn--add-to-cart" type="button" data-product-id="coffee-003" data-name="Morning Rise Espresso Blend" data-price="11.00" data-image="images/coffee/espresso-blend.jpg" data-type="coffee">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card reveal-child" data-product-id="coffee-004" data-category="decaf">
+                        <figure class="product-card__figure">
+                            <img src="images/coffee/decaf-blend.jpg" alt="Decaf Harmony coffee beans naturally decaffeinated" width="600" height="600" loading="lazy">
+                            <figcaption class="product-card__caption">Decaf Harmony — Naturally Decaffeinated</figcaption>
+                        </figure>
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Decaf Harmony</h3>
+                            <p class="product-card__description">All the flavour, none of the buzz. Naturally decaffeinated using the Swiss Water Process for a clean, smooth cup.</p>
+                            <details class="product-card__details">
+                                <summary>Tasting Notes &amp; Brewing</summary>
+                                <ul class="product-card__notes">
+                                    <li><strong>Tasting Notes:</strong> Honey, almond, milk chocolate</li>
+                                    <li><strong>Roast Level:</strong> Medium</li>
+                                    <li><strong>Origin:</strong> Blend (Colombia, Mexico) — Swiss Water Decaf</li>
+                                    <li><strong>Recommended Brewing:</strong> French Press, Drip</li>
+                                </ul>
+                            </details>
+                            <p class="product-card__price">&pound;10.50 <span class="product-card__unit">/ 250g</span></p>
+                            <button class="btn btn--primary btn--add-to-cart" type="button" data-product-id="coffee-004" data-name="Decaf Harmony" data-price="10.50" data-image="images/coffee/decaf-blend.jpg" data-type="coffee">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card reveal-child" data-product-id="coffee-005" data-category="blend">
+                        <figure class="product-card__figure">
+                            <img src="images/coffee/cold-brew-concentrate.jpg" alt="Cold Brew Concentrate coffee in a glass bottle" width="600" height="600" loading="lazy">
+                            <figcaption class="product-card__caption">Cold Brew Concentrate</figcaption>
+                        </figure>
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Cold Brew Concentrate</h3>
+                            <p class="product-card__description">Specially roasted and ground for cold brewing. Dilute with water or milk for a refreshing iced coffee.</p>
+                            <details class="product-card__details">
+                                <summary>Tasting Notes &amp; Brewing</summary>
+                                <ul class="product-card__notes">
+                                    <li><strong>Tasting Notes:</strong> Cocoa, vanilla, smooth low acidity</li>
+                                    <li><strong>Roast Level:</strong> Medium-Dark</li>
+                                    <li><strong>Origin:</strong> Blend (Brazil, Honduras)</li>
+                                    <li><strong>Recommended Brewing:</strong> Cold Brew (12-24 hour steep)</li>
+                                </ul>
+                            </details>
+                            <p class="product-card__price">&pound;13.00 <span class="product-card__unit">/ 250g</span></p>
+                            <button class="btn btn--primary btn--add-to-cart" type="button" data-product-id="coffee-005" data-name="Cold Brew Concentrate" data-price="13.00" data-image="images/coffee/cold-brew-concentrate.jpg" data-type="coffee">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card reveal-child" data-product-id="coffee-006" data-category="limited">
+                        <figure class="product-card__figure">
+                            <img src="images/coffee/seasonal-blend.jpg" alt="Seasonal Harvest Limited Edition coffee bag" width="600" height="600" loading="lazy">
+                            <figcaption class="product-card__caption">Seasonal Harvest — Limited Edition</figcaption>
+                        </figure>
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Seasonal Harvest Limited Edition</h3>
+                            <p class="product-card__description">Our roaster's annual limited release. This year's blend features warm spice notes perfect for autumn evenings.</p>
+                            <details class="product-card__details">
+                                <summary>Tasting Notes &amp; Brewing</summary>
+                                <ul class="product-card__notes">
+                                    <li><strong>Tasting Notes:</strong> Cinnamon, baked apple, brown sugar</li>
+                                    <li><strong>Roast Level:</strong> Medium-Dark</li>
+                                    <li><strong>Origin:</strong> Limited batch (Kenya, Rwanda)</li>
+                                    <li><strong>Recommended Brewing:</strong> Pour-over, Drip</li>
+                                </ul>
+                            </details>
+                            <p class="product-card__price">&pound;16.00 <span class="product-card__unit">/ 250g</span></p>
+                            <button class="btn btn--primary btn--add-to-cart" type="button" data-product-id="coffee-006" data-name="Seasonal Harvest Limited Edition" data-price="16.00" data-image="images/coffee/seasonal-blend.jpg" data-type="coffee">Add to Cart</button>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <aside id="brewing-tips" class="section section--alt" aria-label="Brewing tips">
+            <div class="container">
+                <h2 class="section__title">Quick Brewing Guide</h2>
+                <div class="brewing-tips__grid">
+                    <article class="brewing-tip">
+                        <h3 class="brewing-tip__title">Pour-Over</h3>
+                        <p>Use a medium-fine grind. Pour hot water (92-96&deg;C) in slow, circular motions. Total brew time: 3-4 minutes.</p>
+                    </article>
+                    <article class="brewing-tip">
+                        <h3 class="brewing-tip__title">French Press</h3>
+                        <p>Use a coarse grind. Steep for 4 minutes with water just off the boil. Press slowly and serve immediately.</p>
+                    </article>
+                    <article class="brewing-tip">
+                        <h3 class="brewing-tip__title">AeroPress</h3>
+                        <p>Use a fine-medium grind. Brew for 1-2 minutes at 80-85&deg;C. Press steadily for a clean, smooth cup.</p>
+                    </article>
+                </div>
+                <p class="brewing-tips__cta"><a href="equipment.html" class="btn btn--secondary">Explore Brewing Equipment</a></p>
+            </div>
+        </aside>
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="container footer__inner">
+            <div class="footer__section">
+                <h3 class="footer__heading">About Us</h3>
+                <p class="footer__text">Bean Boutique - Your neighbourhood coffee shop bringing artisanal coffee to your cup since 2020.</p>
+                <address class="footer__address">
+                    <p>123 Coffee Lane, Bean Town, BT1 2AB</p>
+                    <p>Phone: <a href="tel:+441234567890">(0123) 456-7890</a></p>
+                    <p>Email: <a href="mailto:hello@beanboutique.com">hello@beanboutique.com</a></p>
+                </address>
+                <nav aria-label="Footer navigation" class="footer__links">
+                    <a href="index.html">Home</a>
+                    <a href="coffee.html">Coffee</a>
+                    <a href="equipment.html">Equipment</a>
+                    <a href="events.html">Events</a>
+                    <a href="offers.html">Offers</a>
+                    <a href="cart.html">Cart</a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="#" aria-label="Follow us on Facebook">Facebook</a>
+                    <a href="#" aria-label="Follow us on Twitter">Twitter</a>
+                </nav>
+            </div>
+            <div class="footer__section">
+                <h3 class="footer__heading">Newsletter</h3>
+                <form class="footer__newsletter" id="newsletterForm" action="#" method="post">
+                    <label for="footer-email" class="sr-only">Email address</label>
+                    <input type="email" id="footer-email" name="email" placeholder="Your email address" required aria-required="true">
+                    <button type="submit" class="btn btn--primary btn--sm">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <small>&copy; 2026 Bean Boutique Coffee Shop. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/search.js" defer></script>
+    <script src="js/modal.js" defer></script>
+    <script src="js/forms.js" defer></script>
+</body>
+</html>

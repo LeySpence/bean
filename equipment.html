@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#111111">
+    <meta name="description" content="Brewing equipment for the perfect cup at home. Espresso machines, French presses, pour-over sets and more.">
+    <title>Brewing Equipment — Bean Boutique</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Switzer:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+</head>
+<body id="page-equipment">
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <header id="header" class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">
+                <img src="images/icons/logo.svg" alt="Bean Boutique Coffee Shop" width="36" height="36" loading="eager">
+                <span>Bean Boutique</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" type="button">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <nav id="nav" aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-links__link">Home</a></li>
+                    <li><a href="coffee.html" class="nav-links__link">Coffee</a></li>
+                    <li><a href="equipment.html" class="nav-links__link nav-links__link--active" aria-current="page">Equipment</a></li>
+                    <li><a href="events.html" class="nav-links__link">Events</a></li>
+                    <li><a href="offers.html" class="nav-links__link">Offers</a></li>
+                    <li><a href="cart.html" class="nav-links__link nav-links__link--cart">Cart <span id="cartCount" class="cart-count">0</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb__list">
+                    <li class="breadcrumb__item"><a href="index.html" class="breadcrumb__link">Home</a></li>
+                    <li class="breadcrumb__item breadcrumb__item--current" aria-current="page">Equipment</li>
+                </ol>
+            </div>
+        </nav>
+
+        <section id="page-header" class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">Brewing Equipment</h1>
+                <p class="page-header__subtitle">Everything you need to craft the perfect cup at home. From espresso machines to French presses.</p>
+            </div>
+        </section>
+
+        <section id="equipment-grid" class="section" aria-label="Equipment catalogue">
+            <div class="container">
+                <div class="product-grid">
+
+                    <article class="product-card reveal-child" data-product-id="equip-001">
+                        <figure class="product-card__figure">
+                            <img src="images/equipment/espresso-machine.jpg" alt="Professional espresso machine with portafilter and steam wand" width="800" height="600" loading="lazy">
+                            <figcaption class="product-card__caption">Professional Espresso Machine</figcaption>
+                        </figure>
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Professional Espresso Machine</h3>
+                            <p class="product-card__description">A commercial-grade espresso machine with 15-bar pressure, built-in grinder, and steam wand for perfect latte art at home.</p>
+                            <ul class="product-card__tips">
+                                <li>Always preheat the portafilter before brewing</li>
+                                <li>Use freshly ground coffee (18-20g for a double shot)</li>
+                                <li>Purge the steam wand before and after frothing milk</li>
+                                <li>Descale monthly for optimal performance</li>
+                            </ul>
+                            <p class="product-card__price">&pound;899.00</p>
+                            <button class="btn btn--primary btn--add-to-cart" type="button" data-product-id="equip-001" data-name="Professional Espresso Machine" data-price="899.00" data-image="images/equipment/espresso-machine.jpg" data-type="equipment">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card reveal-child" data-product-id="equip-002">
+                        <figure class="product-card__figure">
+                            <img src="images/equipment/pour-over-set.jpg" alt="Ceramic pour-over coffee dripper set with carafe" width="800" height="600" loading="lazy">
+                            <figcaption class="product-card__caption">Ceramic Pour-Over Set</figcaption>
+                        </figure>
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Ceramic Pour-Over Set</h3>
+                            <p class="product-card__description">A beautifully crafted ceramic dripper with a borosilicate glass carafe. Produces a clean, bright cup that highlights the coffee's natural flavours.</p>
+                            <ul class="product-card__tips">
+                                <li>Rinse the paper filter with hot water before brewing</li>
+                                <li>Use a medium-fine grind for optimal extraction</li>
+                                <li>Pour in slow, concentric circles for even extraction</li>
+                            </ul>
+                            <p class="product-card__price">&pound;34.99</p>
+                            <button class="btn btn--primary btn--add-to-cart" type="button" data-product-id="equip-002" data-name="Ceramic Pour-Over Set" data-price="34.99" data-image="images/equipment/pour-over-set.jpg" data-type="equipment">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card reveal-child" data-product-id="equip-003">
+                        <figure class="product-card__figure">
+                            <img src="images/equipment/french-press.jpg" alt="Classic French press coffee maker with glass carafe" width="800" height="600" loading="lazy">
+                            <figcaption class="product-card__caption">Classic French Press</figcaption>
+                        </figure>
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Classic French Press</h3>
+                            <p class="product-card__description">A timeless brewing method that produces a full-bodied, rich cup. Double-walled stainless steel keeps your coffee hot for hours.</p>
+                            <ul class="product-card__tips">
+                                <li>Use a coarse grind to prevent sediment</li>
+                                <li>Steep for exactly 4 minutes</li>
+                                <li>Press the plunger down slowly and steadily</li>
+                                <li>Serve immediately to prevent over-extraction</li>
+                            </ul>
+                            <p class="product-card__price">&pound;24.99</p>
+                            <button class="btn btn--primary btn--add-to-cart" type="button" data-product-id="equip-003" data-name="Classic French Press" data-price="24.99" data-image="images/equipment/french-press.jpg" data-type="equipment">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card reveal-child" data-product-id="equip-004">
+                        <figure class="product-card__figure">
+                            <img src="images/equipment/aeropress.jpg" alt="AeroPress coffee maker with accessories" width="800" height="600" loading="lazy">
+                            <figcaption class="product-card__caption">AeroPress Coffee Maker</figcaption>
+                        </figure>
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">AeroPress Coffee Maker</h3>
+                            <p class="product-card__description">Versatile and portable, the AeroPress uses air pressure to brew a smooth, rich cup in under two minutes. Perfect for travel.</p>
+                            <ul class="product-card__tips">
+                                <li>Experiment with water temperature (80-96&deg;C) for different flavours</li>
+                                <li>Try the inverted method for a longer steep time</li>
+                                <li>Use a fine-medium grind for best results</li>
+                            </ul>
+                            <p class="product-card__price">&pound;39.99</p>
+                            <button class="btn btn--primary btn--add-to-cart" type="button" data-product-id="equip-004" data-name="AeroPress Coffee Maker" data-price="39.99" data-image="images/equipment/aeropress.jpg" data-type="equipment">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card reveal-child" data-product-id="equip-005">
+                        <figure class="product-card__figure">
+                            <img src="images/equipment/chemex.jpg" alt="Chemex pour-over glass coffee brewer with wooden collar" width="800" height="600" loading="lazy">
+                            <figcaption class="product-card__caption">Chemex Coffee Brewer</figcaption>
+                        </figure>
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Chemex Coffee Brewer</h3>
+                            <p class="product-card__description">An iconic hourglass-shaped brewer that produces an exceptionally clean cup. The thick bonded filters remove oils for a bright, sediment-free brew.</p>
+                            <ul class="product-card__tips">
+                                <li>Use Chemex-specific bonded filters</li>
+                                <li>Pre-rinse the filter thoroughly with hot water</li>
+                                <li>Use a medium-coarse grind and 1:16 coffee-to-water ratio</li>
+                            </ul>
+                            <p class="product-card__price">&pound;49.99</p>
+                            <button class="btn btn--primary btn--add-to-cart" type="button" data-product-id="equip-005" data-name="Chemex Coffee Brewer" data-price="49.99" data-image="images/equipment/chemex.jpg" data-type="equipment">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card reveal-child" data-product-id="equip-006">
+                        <figure class="product-card__figure">
+                            <img src="images/equipment/moka-pot.jpg" alt="Bialetti Moka Pot stovetop espresso maker" width="800" height="600" loading="lazy">
+                            <figcaption class="product-card__caption">Bialetti Moka Pot</figcaption>
+                        </figure>
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Bialetti Moka Pot</h3>
+                            <p class="product-card__description">The classic Italian stovetop brewer that produces a strong, espresso-like coffee. A kitchen staple since 1933.</p>
+                            <ul class="product-card__tips">
+                                <li>Use a medium-fine grind, do not tamp</li>
+                                <li>Fill the base with water just below the safety valve</li>
+                                <li>Brew on medium heat and remove from stove when you hear a hissing sound</li>
+                                <li>Never use soap — rinse with warm water only</li>
+                            </ul>
+                            <p class="product-card__price">&pound;29.99</p>
+                            <button class="btn btn--primary btn--add-to-cart" type="button" data-product-id="equip-006" data-name="Bialetti Moka Pot" data-price="29.99" data-image="images/equipment/moka-pot.jpg" data-type="equipment">Add to Cart</button>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="comparison" class="section section--alt" aria-label="Equipment comparison">
+            <div class="container">
+                <h2 class="section__title">Equipment Comparison</h2>
+                <div class="table-responsive">
+                    <table class="comparison-table">
+                        <caption>Compare our brewing equipment by brew time, difficulty, best use, and price</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Equipment</th>
+                                <th scope="col">Brew Time</th>
+                                <th scope="col">Difficulty</th>
+                                <th scope="col">Best For</th>
+                                <th scope="col">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Professional Espresso Machine</th>
+                                <td>1-2 min</td>
+                                <td>Advanced</td>
+                                <td>Espresso, lattes, cappuccinos</td>
+                                <td>&pound;899.00</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Ceramic Pour-Over Set</th>
+                                <td>3-4 min</td>
+                                <td>Beginner</td>
+                                <td>Clean, bright single cups</td>
+                                <td>&pound;34.99</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Classic French Press</th>
+                                <td>4 min</td>
+                                <td>Beginner</td>
+                                <td>Full-bodied, rich cups</td>
+                                <td>&pound;24.99</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">AeroPress Coffee Maker</th>
+                                <td>1-2 min</td>
+                                <td>Intermediate</td>
+                                <td>Smooth, versatile cups, travel</td>
+                                <td>&pound;39.99</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Chemex Coffee Brewer</th>
+                                <td>4-5 min</td>
+                                <td>Beginner</td>
+                                <td>Large batches, clean flavour</td>
+                                <td>&pound;49.99</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Bialetti Moka Pot</th>
+                                <td>5 min</td>
+                                <td>Beginner</td>
+                                <td>Strong, espresso-like coffee</td>
+                                <td>&pound;29.99</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="pro-tips" class="section" aria-label="Professional brewing tips">
+            <div class="container">
+                <h2 class="section__title">Pro Brewing Tips</h2>
+                <div class="tips__grid">
+                    <article class="tip-card">
+                        <h3 class="tip-card__title">Water Temperature</h3>
+                        <p>The ideal brewing temperature is between 92&deg;C and 96&deg;C (197-205&deg;F). Water that is too hot will over-extract, while water that is too cool will under-extract.</p>
+                    </article>
+                    <article class="tip-card">
+                        <h3 class="tip-card__title">Grind Size Matters</h3>
+                        <p>Match your grind to your brewing method: coarse for French Press, medium for drip, fine for espresso. A burr grinder ensures consistent particle size.</p>
+                    </article>
+                    <article class="tip-card">
+                        <h3 class="tip-card__title">Coffee-to-Water Ratio</h3>
+                        <p>A good starting ratio is 1:16 (1g coffee to 16ml water). Adjust to taste — use more coffee for a stronger cup, less for a lighter brew.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="container footer__inner">
+            <div class="footer__section">
+                <h3 class="footer__heading">About Us</h3>
+                <p class="footer__text">Bean Boutique - Your neighbourhood coffee shop bringing artisanal coffee to your cup since 2020.</p>
+                <address class="footer__address">
+                    <p>123 Coffee Lane, Bean Town, BT1 2AB</p>
+                    <p>Phone: <a href="tel:+441234567890">(0123) 456-7890</a></p>
+                    <p>Email: <a href="mailto:hello@beanboutique.com">hello@beanboutique.com</a></p>
+                </address>
+                <nav aria-label="Footer navigation" class="footer__links">
+                    <a href="index.html">Home</a>
+                    <a href="coffee.html">Coffee</a>
+                    <a href="equipment.html">Equipment</a>
+                    <a href="events.html">Events</a>
+                    <a href="offers.html">Offers</a>
+                    <a href="cart.html">Cart</a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="#" aria-label="Follow us on Facebook">Facebook</a>
+                    <a href="#" aria-label="Follow us on Twitter">Twitter</a>
+                </nav>
+            </div>
+            <div class="footer__section">
+                <h3 class="footer__heading">Newsletter</h3>
+                <form class="footer__newsletter" id="newsletterForm" action="#" method="post">
+                    <label for="footer-email" class="sr-only">Email address</label>
+                    <input type="email" id="footer-email" name="email" placeholder="Your email address" required aria-required="true">
+                    <button type="submit" class="btn btn--primary btn--sm">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <small>&copy; 2026 Bean Boutique Coffee Shop. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/search.js" defer></script>
+    <script src="js/modal.js" defer></script>
+    <script src="js/forms.js" defer></script>
+</body>
+</html>

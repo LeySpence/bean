@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#111111">
+    <meta name="description" content="Your shopping cart at Bean Boutique. Review your items and proceed to checkout.">
+    <title>Shopping Cart — Bean Boutique</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Switzer:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+</head>
+<body id="page-cart">
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <header id="header" class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">
+                <img src="images/icons/logo.svg" alt="Bean Boutique Coffee Shop" width="36" height="36" loading="eager">
+                <span>Bean Boutique</span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" type="button">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <nav id="nav" aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-links__link">Home</a></li>
+                    <li><a href="coffee.html" class="nav-links__link">Coffee</a></li>
+                    <li><a href="equipment.html" class="nav-links__link">Equipment</a></li>
+                    <li><a href="events.html" class="nav-links__link">Events</a></li>
+                    <li><a href="offers.html" class="nav-links__link">Offers</a></li>
+                    <li><a href="cart.html" class="nav-links__link nav-links__link--cart nav-links__link--active" aria-current="page">Cart <span id="cartCount" class="cart-count">0</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb__list">
+                    <li class="breadcrumb__item"><a href="index.html" class="breadcrumb__link">Home</a></li>
+                    <li class="breadcrumb__item breadcrumb__item--current" aria-current="page">Cart</li>
+                </ol>
+            </div>
+        </nav>
+
+        <section id="page-header" class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">Your Shopping Cart</h1>
+            </div>
+        </section>
+
+        <section id="cart-items" class="section" aria-label="Shopping cart items">
+            <div class="container">
+                <div id="cart-empty" class="cart-empty" hidden>
+                    <p class="cart-empty__text">Your cart is empty.</p>
+                    <a href="coffee.html" class="btn btn--primary">Start Shopping</a>
+                </div>
+                <div id="cart-list" class="cart-list">
+                    <div class="cart-list__header">
+                        <span>Product</span>
+                        <span>Price</span>
+                        <span>Quantity</span>
+                        <span>Subtotal</span>
+                        <span>Remove</span>
+                    </div>
+                    <div id="cartItems" class="cart-list__body">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <aside id="cart-summary" class="section section--alt" aria-label="Cart summary">
+            <div class="container">
+                <div class="cart-summary">
+                    <h2 class="cart-summary__title">Order Summary</h2>
+                    <div class="cart-summary__rows">
+                        <div class="cart-summary__row">
+                            <span>Subtotal</span>
+                            <span id="cartSubtotal">&pound;0.00</span>
+                        </div>
+                        <div class="cart-summary__row">
+                            <span>Shipping</span>
+                            <span id="cartShipping">Free</span>
+                        </div>
+                        <div class="cart-summary__row cart-summary__row--total">
+                            <span><strong>Total</strong></span>
+                            <span id="cartTotal"><strong>&pound;0.00</strong></span>
+                        </div>
+                    </div>
+                    <div class="cart-summary__actions">
+                        <button id="checkoutBtn" class="btn btn--primary btn--full" type="button" disabled>Proceed to Checkout</button>
+                        <a href="coffee.html" class="btn btn--secondary btn--full">Continue Shopping</a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="container footer__inner">
+            <div class="footer__section">
+                <h3 class="footer__heading">About Us</h3>
+                <p class="footer__text">Bean Boutique - Your neighbourhood coffee shop bringing artisanal coffee to your cup since 2020.</p>
+                <address class="footer__address">
+                    <p>123 Coffee Lane, Bean Town, BT1 2AB</p>
+                    <p>Phone: <a href="tel:+441234567890">(0123) 456-7890</a></p>
+                    <p>Email: <a href="mailto:hello@beanboutique.com">hello@beanboutique.com</a></p>
+                </address>
+                <nav aria-label="Footer navigation" class="footer__links">
+                    <a href="index.html">Home</a>
+                    <a href="coffee.html">Coffee</a>
+                    <a href="equipment.html">Equipment</a>
+                    <a href="events.html">Events</a>
+                    <a href="offers.html">Offers</a>
+                    <a href="cart.html">Cart</a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="#" aria-label="Follow us on Facebook">Facebook</a>
+                    <a href="#" aria-label="Follow us on Twitter">Twitter</a>
+                </nav>
+            </div>
+            <div class="footer__section">
+                <h3 class="footer__heading">Newsletter</h3>
+                <form class="footer__newsletter" id="newsletterForm" action="#" method="post">
+                    <label for="footer-email" class="sr-only">Email address</label>
+                    <input type="email" id="footer-email" name="email" placeholder="Your email address" required aria-required="true">
+                    <button type="submit" class="btn btn--primary btn--sm">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <small>&copy; 2026 Bean Boutique Coffee Shop. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/forms.js" defer></script>
+</body>
+</html>
