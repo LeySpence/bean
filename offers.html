@@ -6,10 +6,8 @@
     <meta name="description" content="Special offers, membership plans, and coffee subscription services at Bean Boutique.">
     <title>Offers & Subscription | Bean Boutique</title>
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="asserts/css/fonts.css">
+    <link rel="stylesheet" href="asserts/css/fontawesome.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -47,7 +45,7 @@
     <main>
         <!-- Page Header -->
         <section class="hero" style="height: 50vh; min-height: 300px;" aria-label="Offers and subscription banner">
-            <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1920&q=80');"></div>
+            <div class="hero-bg" style="background-image: url('images/Hero banner (barista pour over).jpg');"></div>
             <div class="hero-overlay"></div>
             <div class="hero-content">
                 <h1>Special Offers & Subscriptions</h1>
@@ -63,42 +61,42 @@
                 
                 <div class="products-grid">
                     <article class="card product-card" data-aos="fade-up">
-                        <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=400&q=80" alt="Starter Bundle" class="card-img">
+                        <img src="images/Beginner's Brewing Bundle.jpg" alt="Starter Bundle" class="card-img">
                         <div class="card-body">
                             <h3 class="card-title">Beginner's Brewing Bundle</h3>
                             <p class="card-text">Everything you need to start your home brewing journey: V60 dripper, filters, 250g House Blend, and a brewing guide.</p>
                             <p class="card-price"><s style="color: var(--gray); font-size: 1rem;">MWK 90,000</s> MWK 66,000</p>
-                            <button class="btn-add" data-id="offer-bundle" onclick="addToCart('offer-bundle', 'Beginner Brewing Bundle', 66000, 'https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=400&q=80')">Add to Cart</button>
+                            <button class="btn-add" data-id="offer-bundle" onclick="addToCart('offer-bundle', 'Beginner Brewing Bundle', 66000, 'images/Beginner's Brewing Bundle.jpg')">Add to Cart</button>
                         </div>
                     </article>
 
                     <article class="card product-card" data-aos="fade-up" data-aos-delay="50">
-                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefda?w=400&q=80" alt="Summer Roast" class="card-img">
+                        <img src="images/Summer Seasonal Roast.jpg" alt="Summer Roast" class="card-img">
                         <div class="card-body">
                             <h3 class="card-title">Summer Seasonal Roast</h3>
                             <p class="card-text">Limited edition light roast with bright citrus and floral notes. Perfect for cold brew and iced coffee season.</p>
                             <p class="card-price"><s style="color: var(--gray); font-size: 1rem;">MWK 30,000</s> MWK 24,000</p>
-                            <button class="btn-add" data-id="offer-summer" onclick="addToCart('offer-summer', 'Summer Seasonal Roast', 24000, 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefda?w=400&q=80')">Add to Cart</button>
+                            <button class="btn-add" data-id="offer-summer" onclick="addToCart('offer-summer', 'Summer Seasonal Roast', 24000, 'images/Summer Seasonal Roast.jpg')">Add to Cart</button>
                         </div>
                     </article>
 
                     <article class="card product-card" data-aos="fade-up" data-aos-delay="100">
-                        <img src="https://images.unsplash.com/photo-1517080319669-955c2a4e43b7?w=400&q=80" alt="Grinder Sale" class="card-img">
+                        <img src="images/Baratza Encore Refurbished.jpg" alt="Grinder Sale" class="card-img">
                         <div class="card-body">
                             <h3 class="card-title">Baratza Encore - Refurbished</h3>
                             <p class="card-text">Factory-refurbished Encore grinder with full 1-year warranty. Professionally serviced and tested.</p>
                             <p class="card-price"><s style="color: var(--gray); font-size: 1rem;">MWK 280,000</s> MWK 200,000</p>
-                            <button class="btn-add" data-id="offer-grinder" onclick="addToCart('offer-grinder', 'Baratza Encore Refurbished', 200000, 'https://images.unsplash.com/photo-1517080319669-955c2a4e43b7?w=400&q=80')">Add to Cart</button>
+                            <button class="btn-add" data-id="offer-grinder" onclick="addToCart('offer-grinder', 'Baratza Encore Refurbished', 200000, 'images/Baratza Encore Refurbished.jpg')">Add to Cart</button>
                         </div>
                     </article>
 
                     <article class="card product-card" data-aos="fade-up" data-aos-delay="150">
-                        <img src="https://images.unsplash.com/photo-1504630083234-14187a9df0f5?w=400&q=80" alt="Workshop Discount" class="card-img">
+                        <img src="images/Workshop Duo Pass.jpg" alt="Workshop Discount" class="card-img">
                         <div class="card-body">
                             <h3 class="card-title">Workshop Duo Pass</h3>
                             <p class="card-text">Book any two workshops and save 20%. Perfect for couples or friends who want to learn together.</p>
                             <p class="card-price"><s style="color: var(--gray); font-size: 1rem;">MWK 140,000</s> MWK 112,000</p>
-                            <button class="btn-add" data-id="offer-workshop" onclick="addToCart('offer-workshop', 'Workshop Duo Pass', 112000, 'https://images.unsplash.com/photo-1504630083234-14187a9df0f5?w=400&q=80')">Add to Cart</button>
+                            <button class="btn-add" data-id="offer-workshop" onclick="addToCart('offer-workshop', 'Workshop Duo Pass', 112000, 'images/Workshop Duo Pass.jpg')">Add to Cart</button>
                         </div>
                     </article>
                 </div>

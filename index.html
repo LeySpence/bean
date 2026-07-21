@@ -6,13 +6,11 @@
     <meta name="description" content="Bean Boutique - Premium artisan coffee shop offering unique blends, brewing equipment, and coffee events.">
     <title>Bean Boutique | Artisan Coffee Shop</title>
     
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Local Fonts -->
+    <link rel="stylesheet" href="asserts/css/fonts.css">
     
-    <!-- Font Awesome Plugin -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Local Font Awesome -->
+    <link rel="stylesheet" href="asserts/css/fontawesome.min.css">
     
     <!-- AOS Animation Plugin -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -69,19 +67,19 @@
         <section class="container" data-aos="fade-up">
             <h2 class="section-title">Experience the Journey</h2>
             <div class="slideshow" role="region" aria-label="Featured images slideshow">
-                <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=1200&q=80');" aria-hidden="false">
+                <div class="slide active" style="background-image: url('images/Ethically Sourced Beans.png');" aria-hidden="false">
                     <div class="slide-content">
                         <h3>Ethically Sourced Beans</h3>
                         <p>From farm to cup, we ensure every bean tells a story of sustainability.</p>
                     </div>
                 </div>
-                <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1517080319669-955c2a4e43b7?w=1200&q=80');" aria-hidden="true">
+                <div class="slide" style="background-image: url('images/Masterful Brewing.png');" aria-hidden="true">
                     <div class="slide-content">
                         <h3>Masterful Brewing</h3>
                         <p>Professional equipment for the perfect extraction every time.</p>
                     </div>
                 </div>
-                <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1200&q=80');" aria-hidden="true">
+                <div class="slide" style="background-image: url('images/Community & Connection.jpg');" aria-hidden="true">
                     <div class="slide-content">
                         <h3>Community & Connection</h3>
                         <p>Join our vibrant community of coffee enthusiasts and experts.</p>
@@ -102,39 +100,39 @@
                 <p class="section-subtitle" data-aos="fade-up">Hand-picked favourites from our roastery</p>
                 <div class="products-grid">
                     <article class="card product-card" data-aos="fade-up" data-aos-delay="0">
-                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefda?w=400&q=80" alt="Ethiopian Yirgacheffe coffee beans" class="card-img">
+                        <img src="images/Ethiopian Yirgacheffe.jpg" alt="Ethiopian Yirgacheffe coffee beans" class="card-img">
                         <div class="card-body">
                             <h3 class="card-title">Ethiopian Yirgacheffe</h3>
                             <p class="card-text">Bright, floral notes with a hint of citrus and bergamot.</p>
                             <p class="card-price">MWK 30,000</p>
-                            <button class="btn-add" data-id="eth-yirg" onclick="addToCart('eth-yirg', 'Ethiopian Yirgacheffe', 30000, 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefda?w=400&q=80')">Add to Cart</button>
+                            <button class="btn-add" data-id="eth-yirg" onclick="addToCart('eth-yirg', 'Ethiopian Yirgacheffe', 30000, 'images/Ethiopian Yirgacheffe.jpg')">Add to Cart</button>
                         </div>
                     </article>
                     <article class="card product-card" data-aos="fade-up" data-aos-delay="100">
-                        <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400&q=80" alt="Colombian Supremo coffee beans" class="card-img">
+                        <img src="images/Colombian Supremo.jpg" alt="Colombian Supremo coffee beans" class="card-img">
                         <div class="card-body">
                             <h3 class="card-title">Colombian Supremo</h3>
                             <p class="card-text">Smooth, balanced body with caramel sweetness and nutty finish.</p>
                             <p class="card-price">MWK 26,000</p>
-                            <button class="btn-add" data-id="col-sup" onclick="addToCart('col-sup', 'Colombian Supremo', 26000, 'https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400&q=80')">Add to Cart</button>
+                            <button class="btn-add" data-id="col-sup" onclick="addToCart('col-sup', 'Colombian Supremo', 26000, 'images/Colombian Supremo.jpg')">Add to Cart</button>
                         </div>
                     </article>
                     <article class="card product-card" data-aos="fade-up" data-aos-delay="200">
-                        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?w=400&q=80" alt="Brazilian Santos coffee beans" class="card-img">
+                        <img src="images/Brazilian Santos.jpg" alt="Brazilian Santos coffee beans" class="card-img">
                         <div class="card-body">
                             <h3 class="card-title">Brazilian Santos</h3>
                             <p class="card-text">Low acidity with chocolate notes and a creamy mouthfeel.</p>
                             <p class="card-price">MWK 24,000</p>
-                            <button class="btn-add" data-id="bra-san" onclick="addToCart('bra-san', 'Brazilian Santos', 24000, 'https://images.unsplash.com/photo-1512568400610-62da28bc8a13?w=400&q=80')">Add to Cart</button>
+                            <button class="btn-add" data-id="bra-san" onclick="addToCart('bra-san', 'Brazilian Santos', 24000, 'images/Brazilian Santos.jpg')">Add to Cart</button>
                         </div>
                     </article>
                     <article class="card product-card" data-aos="fade-up" data-aos-delay="300">
-                        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&q=80" alt="Kenyan AA coffee beans" class="card-img">
+                        <img src="images/Kenyan AA.jpg" alt="Kenyan AA coffee beans" class="card-img">
                         <div class="card-body">
                             <h3 class="card-title">Kenyan AA</h3>
                             <p class="card-text">Bold, wine-like acidity with blackcurrant and tomato notes.</p>
                             <p class="card-price">MWK 32,000</p>
-                            <button class="btn-add" data-id="ken-aa" onclick="addToCart('ken-aa', 'Kenyan AA', 32000, 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&q=80')">Add to Cart</button>
+                            <button class="btn-add" data-id="ken-aa" onclick="addToCart('ken-aa', 'Kenyan AA', 32000, 'images/Kenyan AA.jpg')">Add to Cart</button>
                         </div>
                     </article>
                 </div>
@@ -151,7 +149,7 @@
                 <p class="section-subtitle" data-aos="fade-up">Join us for unforgettable coffee experiences</p>
                 <div class="card-grid">
                     <article class="card" data-aos="fade-up" data-aos-delay="0">
-                        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=400&q=80" alt="Latte Art Workshop" class="card-img">
+                        <img src="images/Latte Art Workshop event.jpg" alt="Latte Art Workshop" class="card-img">
                         <div class="card-body">
                             <h3 class="card-title">Latte Art Workshop</h3>
                             <p class="card-text">Learn the fundamentals of pouring beautiful rosettas and tulips.</p>
@@ -160,7 +158,7 @@
                         </div>
                     </article>
                     <article class="card" data-aos="fade-up" data-aos-delay="100">
-                        <img src="https://images.unsplash.com/photo-1504630083234-14187a9df0f5?w=400&q=80" alt="Coffee Cupping Session" class="card-img">
+                        <img src="images/Cupping Session event.jpg" alt="Coffee Cupping Session" class="card-img">
                         <div class="card-body">
                             <h3 class="card-title">Cupping Session</h3>
                             <p class="card-text">Taste and evaluate 6 unique single-origin coffees with our head roaster.</p>
@@ -169,7 +167,7 @@
                         </div>
                     </article>
                     <article class="card" data-aos="fade-up" data-aos-delay="200">
-                        <img src="https://images.unsplash.com/photo-1442512595367-42736f9e51f9?w=400&q=80" alt="Home Brewing Masterclass" class="card-img">
+                        <img src="images/Home Brewing Masterclass event.jpg" alt="Home Brewing Masterclass" class="card-img">
                         <div class="card-body">
                             <h3 class="card-title">Home Brewing Masterclass</h3>
                             <p class="card-text">Master V60, AeroPress, and French Press techniques at home.</p>
@@ -187,16 +185,16 @@
                 <h2 class="section-title" data-aos="fade-up">Our Space</h2>
                 <div class="gallery-grid" data-aos="fade-up">
                     <figure class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=400&q=80" alt="Freshly roasted coffee beans in a wooden scoop">
+                        <img src="images/Coffee beans in wooden scoop.jpg" alt="Freshly roasted coffee beans in a wooden scoop">
                     </figure>
                     <figure class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&q=80" alt="Interior of Bean Boutique coffee shop">
+                        <img src="images/Coffee shop interior.jpg" alt="Interior of Bean Boutique coffee shop">
                     </figure>
                     <figure class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&q=80" alt="Barista preparing pour over coffee">
+                        <img src="images/Barista preparing pour over.jpg" alt="Barista preparing pour over coffee">
                     </figure>
                     <figure class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1511537632536-b74c2769373f?w=400&q=80" alt="Latte art on a ceramic cup">
+                        <img src="images/Latte art on ceramic cup.jpg" alt="Latte art on a ceramic cup">
                     </figure>
                 </div>
             </div>
