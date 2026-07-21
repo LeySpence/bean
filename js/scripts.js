@@ -111,10 +111,10 @@ function addToCart(id, name, price, image) {
     if (btn) {
         const originalText = btn.textContent;
         btn.textContent = 'Added!';
-        btn.style.backgroundColor = '#28a745';
+        btn.classList.add('btn-added');
         setTimeout(() => {
             btn.textContent = originalText;
-            btn.style.backgroundColor = '';
+            btn.classList.remove('btn-added');
         }, 1500);
     }
 }
@@ -146,7 +146,7 @@ function renderCart() {
         cartContainer.innerHTML = `
             <tr>
                 <td colspan="5" class="cart-empty">
-                    <i class="fas fa-shopping-cart" style="font-size: 3rem; margin-bottom: 1rem; display: block; color: var(--accent);"></i>
+                    <i class="fas fa-shopping-cart cart-empty-icon"></i>
                     <p>Your cart is empty.</p>
                     <a href="coffee.html" class="btn btn-primary mt-2">Browse Coffee</a>
                     <a href="equipment.html" class="btn btn-outline mt-2">Browse Equipment</a>
@@ -170,14 +170,14 @@ function renderCart() {
                 <td>MWK ${formatMWK(item.price)}</td>
                 <td>
                     <div class="qty-control">
-                        <button class="qty-btn" onclick="updateQuantity('${item.id}', -1)">-</button>
+                        <button class="qty-btn" data-id="${item.id}" data-action="decrement">-</button>
                         <span>${item.qty}</span>
-                        <button class="qty-btn" onclick="updateQuantity('${item.id}', 1)">+</button>
+                        <button class="qty-btn" data-id="${item.id}" data-action="increment">+</button>
                     </div>
                 </td>
                 <td>
                     <strong>MWK ${formatMWK(itemTotal)}</strong>
-                    <button class="qty-btn" onclick="removeFromCart('${item.id}')" style="margin-left: 1rem; color: #dc3545;" aria-label="Remove item">
+                    <button class="qty-btn btn-remove" data-id="${item.id}" data-action="remove" aria-label="Remove item">
                         <i class="fas fa-trash"></i>
                     </button>
                 </td>
@@ -259,6 +259,75 @@ if (typeof AOS !== 'undefined') {
         offset: 100
     });
 }
+
+// ---------- SUBSCRIPTION PLAN BUTTONS ----------
+document.addEventListener('click', (e) => {
+    const planBtn = e.target.closest('a[href="#subscribe"]');
+    if (planBtn) {
+        const planText = planBtn.closest('.pricing-card')?.querySelector('h3')?.textContent?.trim()?.toLowerCase() || '';
+        const selectEl = document.getElementById('planSelect');
+        if (selectEl && planText) {
+            selectEl.value = planText;
+        }
+    }
+});
+
+// ---------- EVENT REGISTRATION BUTTONS ----------
+document.addEventListener('click', (e) => {
+    const registerBtn = e.target.closest('a[href="#register"]');
+    if (registerBtn) {
+        const eventName = registerBtn.closest('.event-body')?.querySelector('.card-title')?.textContent?.trim() || '';
+        const selectEl = document.getElementById('eventName');
+        if (selectEl && eventName) {
+            selectEl.value = eventName;
+        }
+    }
+});
+
+// ---------- SUBSCRIPTION FORM ----------
+const subscriptionForm = document.getElementById('subscriptionForm');
+if (subscriptionForm) {
+    subscriptionForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const plan = document.getElementById('planSelect').value;
+        const planName = plan.charAt(0).toUpperCase() + plan.slice(1);
+        alert('Thank you for subscribing to our ' + planName + ' plan! You will receive a confirmation email shortly.');
+        subscriptionForm.reset();
+    });
+}
+
+// ---------- EVENT DELEGATION FOR CART CONTROLS ----------
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.qty-btn');
+    if (!btn) return;
+
+    const id = btn.getAttribute('data-id');
+    const action = btn.getAttribute('data-action');
+
+    if (action === 'increment') {
+        updateQuantity(id, 1);
+    } else if (action === 'decrement') {
+        updateQuantity(id, -1);
+    } else if (action === 'remove') {
+        removeFromCart(id);
+    }
+});
+
+// ---------- EVENT DELEGATION FOR ADD TO CART ----------
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.btn-add');
+    if (btn) {
+        const id = btn.getAttribute('data-id');
+        const card = btn.closest('.card-body, .event-body');
+        if (card && id) {
+            const name = card.querySelector('.card-title')?.textContent?.trim() || '';
+            const priceText = card.querySelector('.card-price')?.textContent || '';
+            const price = parseInt(priceText.replace(/[^0-9]/g, '')) || 0;
+            const img = card.closest('.product-card, .card')?.querySelector('.card-img, .event-img')?.getAttribute('src') || '';
+            addToCart(id, name, price, img);
+        }
+    }
+});
 
 // ---------- INITIALIZE ----------
 document.addEventListener('DOMContentLoaded', () => {

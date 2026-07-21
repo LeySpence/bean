@@ -6,21 +6,14 @@
     <meta name="description" content="Bean Boutique - Premium artisan coffee shop offering unique blends, brewing equipment, and coffee events.">
     <title>Bean Boutique | Artisan Coffee Shop</title>
     
-    <!-- Local Fonts -->
     <link rel="stylesheet" href="asserts/css/fonts.css">
-    
-    <!-- Local Font Awesome -->
     <link rel="stylesheet" href="asserts/css/fontawesome.min.css">
-    
-    <!-- AOS Animation Plugin -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <!-- External CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Header & Navigation -->
+    
     <header>
         <div class="nav-container">
             <a href="index.html" class="logo" aria-label="Bean Boutique Home">
@@ -42,7 +35,7 @@
                     <li>
                         <a href="cart.html" class="cart-icon" aria-label="Shopping Cart">
                             <i class="fas fa-shopping-cart"></i>
-                            <span class="cart-count" style="display: none;">0</span>
+                            <span class="cart-count">0</span>
                         </a>
                     </li>
                 </ul>
@@ -67,19 +60,19 @@
         <section class="container" data-aos="fade-up">
             <h2 class="section-title">Experience the Journey</h2>
             <div class="slideshow" role="region" aria-label="Featured images slideshow">
-                <div class="slide active" style="background-image: url('images/Ethically Sourced Beans.png');" aria-hidden="false">
+                <div class="slide active slide-bg-1" aria-hidden="false">
                     <div class="slide-content">
                         <h3>Ethically Sourced Beans</h3>
                         <p>From farm to cup, we ensure every bean tells a story of sustainability.</p>
                     </div>
                 </div>
-                <div class="slide" style="background-image: url('images/Masterful Brewing.png');" aria-hidden="true">
+                <div class="slide slide-bg-2" aria-hidden="true">
                     <div class="slide-content">
                         <h3>Masterful Brewing</h3>
                         <p>Professional equipment for the perfect extraction every time.</p>
                     </div>
                 </div>
-                <div class="slide" style="background-image: url('images/Community & Connection.jpg');" aria-hidden="true">
+                <div class="slide slide-bg-3" aria-hidden="true">
                     <div class="slide-content">
                         <h3>Community & Connection</h3>
                         <p>Join our vibrant community of coffee enthusiasts and experts.</p>
@@ -105,7 +98,7 @@
                             <h3 class="card-title">Ethiopian Yirgacheffe</h3>
                             <p class="card-text">Bright, floral notes with a hint of citrus and bergamot.</p>
                             <p class="card-price">MWK 30,000</p>
-                            <button class="btn-add" data-id="eth-yirg" onclick="addToCart('eth-yirg', 'Ethiopian Yirgacheffe', 30000, 'images/Ethiopian Yirgacheffe.jpg')">Add to Cart</button>
+                            <button class="btn-add" data-id="eth-yirg">Add to Cart</button>
                         </div>
                     </article>
                     <article class="card product-card" data-aos="fade-up" data-aos-delay="100">
@@ -114,7 +107,7 @@
                             <h3 class="card-title">Colombian Supremo</h3>
                             <p class="card-text">Smooth, balanced body with caramel sweetness and nutty finish.</p>
                             <p class="card-price">MWK 26,000</p>
-                            <button class="btn-add" data-id="col-sup" onclick="addToCart('col-sup', 'Colombian Supremo', 26000, 'images/Colombian Supremo.jpg')">Add to Cart</button>
+                            <button class="btn-add" data-id="col-sup">Add to Cart</button>
                         </div>
                     </article>
                     <article class="card product-card" data-aos="fade-up" data-aos-delay="200">
@@ -123,7 +116,7 @@
                             <h3 class="card-title">Brazilian Santos</h3>
                             <p class="card-text">Low acidity with chocolate notes and a creamy mouthfeel.</p>
                             <p class="card-price">MWK 24,000</p>
-                            <button class="btn-add" data-id="bra-san" onclick="addToCart('bra-san', 'Brazilian Santos', 24000, 'images/Brazilian Santos.jpg')">Add to Cart</button>
+                            <button class="btn-add" data-id="bra-san">Add to Cart</button>
                         </div>
                     </article>
                     <article class="card product-card" data-aos="fade-up" data-aos-delay="300">
@@ -132,7 +125,7 @@
                             <h3 class="card-title">Kenyan AA</h3>
                             <p class="card-text">Bold, wine-like acidity with blackcurrant and tomato notes.</p>
                             <p class="card-price">MWK 32,000</p>
-                            <button class="btn-add" data-id="ken-aa" onclick="addToCart('ken-aa', 'Kenyan AA', 32000, 'images/Kenyan AA.jpg')">Add to Cart</button>
+                            <button class="btn-add" data-id="ken-aa">Add to Cart</button>
                         </div>
                     </article>
                 </div>
@@ -234,7 +227,7 @@
         <section class="newsletter">
             <div class="container">
                 <h2 class="section-title" data-aos="fade-up">Stay Caffeinated</h2>
-                <p class="section-subtitle" data-aos="fade-up" style="color: rgba(255,255,255,0.9);">Subscribe for exclusive offers, brewing tips, and event updates.</p>
+                <p class="section-subtitle newsletter-subtitle" data-aos="fade-up">Subscribe for exclusive offers, brewing tips, and event updates.</p>
                 <form class="newsletter-form" id="newsletterForm" data-aos="fade-up">
                     <label for="newsletterEmail" class="visually-hidden">Email address</label>
                     <input type="email" id="newsletterEmail" name="email" placeholder="Enter your email address" required aria-required="true">
@@ -292,7 +285,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Bean Boutique Coffee Shop. All rights reserved. | <a href="#" style="color: rgba(255,255,255,0.6);">Privacy Policy</a></p>
+            <p>&copy; 2026 Bean Boutique Coffee Shop. All rights reserved. | <a href="#" class="footer-privacy">Privacy Policy</a></p>
         </div>
     </footer>
 
@@ -307,9 +300,9 @@
                     <label for="modalEmail">Email Address</label>
                     <input type="email" id="modalEmail" name="email" placeholder="your@email.com" required aria-required="true">
                 </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%;">Claim My 15% Off</button>
+                <button type="submit" class="btn btn-primary full-width">Claim My 15% Off</button>
             </form>
-            <p class="mt-1" style="font-size: 0.85rem; color: var(--gray);">No spam, ever. Unsubscribe anytime.</p>
+            <p class="mt-1 modal-disclaimer">No spam, ever. Unsubscribe anytime.</p>
         </div>
     </div>
 

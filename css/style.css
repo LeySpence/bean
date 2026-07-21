@@ -62,7 +62,8 @@ img {
 
 /* ---------- 4. HEADER & NAVIGATION ---------- */
 header {
-    background-color: var(--white);
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
     box-shadow: 0 2px 20px var(--shadow);
     position: sticky;
     top: 0;
@@ -77,7 +78,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
+    height: 60px;
 }
 
 .logo {
@@ -189,7 +190,7 @@ nav a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('images/Coffee beans in wooden scoop.jpg');
+    background-image: url('../images/home hero.jpg');
     background-size: cover;
     background-position: center;
     z-index: -2;
@@ -991,6 +992,40 @@ footer {
     color: var(--accent);
     width: 20px;
 }
+
+/* ---------- 25. CLEANUP & UTILITY CLASSES ---------- */
+.notes-text { color: var(--gray); font-size: 0.9rem; margin-bottom: 0.5rem; }
+.full-width { width: 100%; }
+.form-wrapper { max-width: 600px; margin: 0 auto; background-color: var(--white); padding: 2.5rem; border-radius: var(--radius); box-shadow: 0 5px 20px var(--shadow); }
+.hero-small { height: 40vh; min-height: 250px; }
+.hero-medium { height: 50vh; min-height: 300px; }
+.icon-accent { font-size: 2rem; color: var(--accent); margin-bottom: 1rem; display: block; }
+.cart-empty-icon { font-size: 3rem; margin-bottom: 1rem; display: block; color: var(--accent); }
+.text-right { text-align: right; }
+.ml-1 { margin-left: 1rem; }
+.footer-privacy { color: rgba(255,255,255,0.6); }
+.newsletter-subtitle { color: rgba(255,255,255,0.9); }
+.max-w-800 { max-width: 800px; margin: 0 auto; }
+.max-w-900 { max-width: 900px; margin: 0 auto; }
+.pricing-disabled { color: var(--light-gray); }
+.plan-desc { color: var(--gray); margin-bottom: 1rem; }
+.modal-disclaimer { font-size: 0.85rem; color: var(--gray); }
+.btn-group-right { text-align: right; margin-top: 1.5rem; }
+.checkout-btn-ml { margin-left: 1rem; }
+.btn-remove { margin-left: 1rem; color: #dc3545; background: none; border: none; cursor: pointer; }
+.btn-added { background-color: #28a745; }
+.strikethrough { color: var(--gray); font-size: 1rem; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border-width: 0; }
+
+.slide-bg-1 { background-image: url('../images/Ethically Sourced Beans.png'); }
+.slide-bg-2 { background-image: url('../images/Masterful Brewing.png'); }
+.slide-bg-3 { background-image: url('../images/Community & Connection.jpg'); }
+
+.hero-bg-cart { background-image: url('../images/Hero banner (coffee beans).jpg'); }
+.hero-bg-coffee { background-image: url('../images/Hero banner (latte art).jpg'); }
+.hero-bg-equipment { background-image: url('../images/Espresso machine.jpg'); }
+.hero-bg-events { background-image: url('../images/Hero banner (latte art).jpg'); }
+.hero-bg-offers { background-image: url('../images/Hero banner (barista pour over).jpg'); }
 
 /* ---------- 23. RESPONSIVE ---------- */
 @media (max-width: 1200px) {

@@ -34,7 +34,7 @@
                     <li>
                         <a href="cart.html" class="cart-icon" aria-label="Shopping Cart">
                             <i class="fas fa-shopping-cart"></i>
-                            <span class="cart-count" style="display: none;">0</span>
+                            <span class="cart-count">0</span>
                         </a>
                     </li>
                 </ul>
@@ -44,8 +44,8 @@
 
     <main>
         <!-- Page Header -->
-        <section class="hero" style="height: 50vh; min-height: 300px;" aria-label="Events banner">
-            <div class="hero-bg" style="background-image: url('images/Hero banner (latte art).jpg');"></div>
+        <section class="hero hero-medium" aria-label="Events banner">
+            <div class="hero-bg hero-bg-events"></div>
             <div class="hero-overlay"></div>
             <div class="hero-content">
                 <h1>Events & Workshops</h1>
@@ -72,7 +72,7 @@
                             </div>
                             <p class="card-text">Master the art of milk steaming and pouring beautiful rosettas, hearts, and tulips. All equipment and milk provided.</p>
                             <p class="card-price">MWK 70,000</p>
-                            <a href="#register" class="btn btn-primary btn-small" onclick="document.getElementById('eventName').value='Latte Art Workshop'">Register</a>
+                            <a href="#register" class="btn btn-primary btn-small">Register</a>
                         </div>
                     </article>
 
@@ -88,7 +88,7 @@
                             </div>
                             <p class="card-text">Taste and evaluate 6 unique single-origin coffees with our head roaster. Learn to identify flavour notes and aroma profiles.</p>
                             <p class="card-price">MWK 50,000</p>
-                            <a href="#register" class="btn btn-primary btn-small" onclick="document.getElementById('eventName').value='Single Origin Cupping'">Register</a>
+                            <a href="#register" class="btn btn-primary btn-small">Register</a>
                         </div>
                     </article>
 
@@ -104,7 +104,7 @@
                             </div>
                             <p class="card-text">Master V60, AeroPress, and French Press techniques. Take home a brewing guide and 250g of our House Blend.</p>
                             <p class="card-price">MWK 60,000</p>
-                            <a href="#register" class="btn btn-primary btn-small" onclick="document.getElementById('eventName').value='Home Brewing Masterclass'">Register</a>
+                            <a href="#register" class="btn btn-primary btn-small">Register</a>
                         </div>
                     </article>
 
@@ -120,7 +120,7 @@
                             </div>
                             <p class="card-text">An evening with our head roaster exploring the journey from green bean to perfect roast. Includes tastings and Q&A.</p>
                             <p class="card-price">MWK 40,000</p>
-                            <a href="#register" class="btn btn-primary btn-small" onclick="document.getElementById('eventName').value='Meet the Roaster'">Register</a>
+                            <a href="#register" class="btn btn-primary btn-small">Register</a>
                         </div>
                     </article>
 
@@ -136,7 +136,7 @@
                             </div>
                             <p class="card-text">Learn dial-in techniques, extraction theory, and milk steaming on professional espresso equipment. Small group intensive.</p>
                             <p class="card-price">MWK 90,000</p>
-                            <a href="#register" class="btn btn-primary btn-small" onclick="document.getElementById('eventName').value='Espresso Fundamentals'">Register</a>
+                            <a href="#register" class="btn btn-primary btn-small">Register</a>
                         </div>
                     </article>
 
@@ -152,7 +152,7 @@
                             </div>
                             <p class="card-text">Discover how different origins pair with artisan chocolates. A sensory journey led by our certified Q Grader.</p>
                             <p class="card-price">MWK 56,000</p>
-                            <a href="#register" class="btn btn-primary btn-small" onclick="document.getElementById('eventName').value='Coffee & Chocolate Pairing'">Register</a>
+                            <a href="#register" class="btn btn-primary btn-small">Register</a>
                         </div>
                     </article>
                 </div>
@@ -165,7 +165,7 @@
                 <h2 class="section-title" data-aos="fade-up">Event Registration</h2>
                 <p class="section-subtitle" data-aos="fade-up">Secure your place at one of our upcoming events</p>
                 
-                <div style="max-width: 600px; margin: 0 auto; background-color: var(--white); padding: 2.5rem; border-radius: var(--radius); box-shadow: 0 5px 20px var(--shadow);" data-aos="fade-up">
+                <div class="form-wrapper" data-aos="fade-up">
                     <form id="eventRegistration">
                         <div class="form-group">
                             <label for="eventName">Select Event</label>
@@ -191,7 +191,7 @@
                             <label for="email">Email Address</label>
                             <input type="email" id="email" name="email" placeholder="your@email.com" required aria-required="true">
                         </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Registration</button>
+                        <button type="submit" class="btn btn-primary full-width">Submit Registration</button>
                     </form>
                 </div>
             </div>
@@ -244,7 +244,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Bean Boutique Coffee Shop. All rights reserved. | <a href="#" style="color: rgba(255,255,255,0.6);">Privacy Policy</a></p>
+            <p>&copy; 2026 Bean Boutique Coffee Shop. All rights reserved. | <a href="#" class="footer-privacy">Privacy Policy</a></p>
         </div>
     </footer>
 
