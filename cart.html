@@ -1,170 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Your Bean Boutique shopping cart. Review and checkout your coffee and equipment selections.">
-  <title>Shopping Cart | Bean Boutique</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/phosphor-icons/1.4.2/css/phosphor.min.css">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your Bean Boutique shopping cart. Review and checkout your coffee and equipment selections.">
+    <title>Shopping Cart | Bean Boutique</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <header class="nav-island">
-    <div class="nav-shell" id="navShell">
-      <a href="index.html" class="logo"><i class="ph ph-coffee"></i> Bean Boutique</a>
-      <button class="hamburger" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </header>
-
-  <div class="nav-overlay" id="navOverlay">
-    <ul class="nav-list">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="coffee.html">Coffee Selection</a></li>
-      <li><a href="equipment.html">Brewing Equipment</a></li>
-      <li><a href="events.html">Events</a></li>
-      <li><a href="offers.html">Offers &amp; Subscription</a></li>
-      <li><a href="cart.html" class="active">Cart <span class="cart-count" style="display:none; font-size:0.5em; vertical-align:super;">0</span></a></li>
-    </ul>
-  </div>
-
-  <main>
-    <section class="hero" style="min-height:50dvh;" aria-label="Shopping cart banner">
-      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=1920&q=80');"></div>
-      <div class="hero-overlay"></div>
-      <div class="hero-content reveal visible">
-        <span class="eyebrow">Review Your Order</span>
-        <h1>Your Shopping Cart</h1>
-        <p>Review your selections and proceed to checkout when ready.</p>
-      </div>
-    </section>
-
-    <!-- CART -->
-    <section class="bg-white">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="eyebrow">Cart Items</span>
-          <h2 class="section-title">Your Selections</h2>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="Bean Boutique Home">
+                <i class="fas fa-mug-hot"></i>
+                Bean Boutique
+            </a>
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="coffee.html">Coffee Selection</a></li>
+                    <li><a href="equipment.html">Brewing Equipment</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="offers.html">Offers & Subscription</a></li>
+                    <li>
+                        <a href="cart.html" class="cart-icon" aria-label="Shopping Cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count" style="display: none;">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <div class="reveal">
-          <div class="shell" style="padding:0;">
-            <div class="core" style="padding:0; overflow-x:auto;">
-              <table class="cart-table">
-                <thead>
-                  <tr>
-                    <th scope="col">Product</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Quantity</th>
-                    <th scope="col">Total</th>
-                  </tr>
-                </thead>
-                <tbody id="cartItems">
-                  <tr>
-                    <td colspan="5" class="cart-empty">
-                      <i class="ph ph-shopping-cart" style="font-size:2.5rem; margin-bottom:1rem; display:block; color:var(--caramel);"></i>
-                      <p style="margin-bottom:1.5rem;">Your cart is empty.</p>
-                      <a href="coffee.html" class="btn btn-primary btn-small">Browse Coffee</a>
-                      <a href="equipment.html" class="btn btn-outline btn-small" style="margin-left:0.75rem;">Browse Equipment</a>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+    <main>
+        <!-- Page Header -->
+        <section class="hero" style="height: 40vh; min-height: 250px;" aria-label="Shopping cart banner">
+            <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=1920&q=80');"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Your Shopping Cart</h1>
+                <p>Review your selections and proceed to checkout when ready.</p>
             </div>
-          </div>
+        </section>
 
-          <div class="cart-total-row" id="cartTotal">Total: MWK 0</div>
-
-          <div style="display:flex; gap:1rem; justify-content:flex-end; flex-wrap:wrap;">
-            <a href="coffee.html" class="btn btn-outline">Continue Shopping</a>
-            <button id="checkoutBtn" class="btn btn-primary">Proceed to Checkout <span class="btn-icon"><i class="ph ph-arrow-right"></i></span></button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TRUST BADGES -->
-    <section class="bg-cream">
-      <div class="container">
-        <div class="card-grid" style="max-width:800px; margin:0 auto;">
-          <article class="shell reveal reveal-delay-1">
-            <div class="core testimonial-card">
-              <i class="ph ph-lock" style="font-size:2rem; color:var(--caramel); margin-bottom:1rem; display:block;"></i>
-              <h3 style="font-family:var(--font-display); font-size:1.15rem; margin-bottom:0.5rem;">Secure Checkout</h3>
-              <p class="core-text">Your payment information is encrypted and protected.</p>
+        <!-- Cart Content -->
+        <section class="bg-white">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Cart Items</h2>
+                
+                <div data-aos="fade-up">
+                    <table class="cart-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Product</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cartItems">
+                            <tr>
+                                <td colspan="5" class="cart-empty">
+                                    <i class="fas fa-shopping-cart" style="font-size: 3rem; margin-bottom: 1rem; display: block; color: var(--accent);"></i>
+                                    <p>Your cart is empty.</p>
+                                    <a href="coffee.html" class="btn btn-primary mt-2">Browse Coffee</a>
+                                    <a href="equipment.html" class="btn btn-outline mt-2">Browse Equipment</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="cart-total-row" id="cartTotal">Total: MWK 0</div>
+                    
+                    <div style="text-align: right; margin-top: 1.5rem;">
+                        <a href="coffee.html" class="btn btn-outline">Continue Shopping</a>
+                        <button id="checkoutBtn" class="btn btn-primary" style="margin-left: 1rem;">Proceed to Checkout</button>
+                    </div>
+                </div>
             </div>
-          </article>
-          <article class="shell reveal reveal-delay-2">
-            <div class="core testimonial-card">
-              <i class="ph ph-truck" style="font-size:2rem; color:var(--caramel); margin-bottom:1rem; display:block;"></i>
-              <h3 style="font-family:var(--font-display); font-size:1.15rem; margin-bottom:0.5rem;">Free Shipping</h3>
-              <p class="core-text">Free delivery on all orders over MWK 60,000 within Lilongwe.</p>
-            </div>
-          </article>
-          <article class="shell reveal reveal-delay-3">
-            <div class="core testimonial-card">
-              <i class="ph ph-arrow-counter-clockwise" style="font-size:2rem; color:var(--caramel); margin-bottom:1rem; display:block;"></i>
-              <h3 style="font-family:var(--font-display); font-size:1.15rem; margin-bottom:0.5rem;">Easy Returns</h3>
-              <p class="core-text">30-day hassle-free returns on all unopened products.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-  </main>
+        </section>
 
-  <footer>
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h3><i class="ph ph-coffee"></i> Bean Boutique</h3>
-        <p>Crafting exceptional coffee experiences since 2018. We source ethically, roast carefully, and brew with passion.</p>
-        <div class="footer-social">
-          <a href="#" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
-          <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
-          <a href="#" aria-label="Twitter"><i class="ph ph-twitter-logo"></i></a>
-          <a href="#" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h3>Quick Links</h3>
-        <p><a href="index.html">Home</a></p>
-        <p><a href="coffee.html">Coffee Selection</a></p>
-        <p><a href="equipment.html">Brewing Equipment</a></p>
-        <p><a href="events.html">Events &amp; Workshops</a></p>
-        <p><a href="offers.html">Special Offers</a></p>
-        <p><a href="cart.html">Shopping Cart</a></p>
-      </div>
-      <div class="footer-col">
-        <h3>Opening Hours</h3>
-        <p>Monday - Friday: 7:00 AM - 7:00 PM</p>
-        <p>Saturday: 8:00 AM - 8:00 PM</p>
-        <p>Sunday: 9:00 AM - 5:00 PM</p>
-        <p>Bank Holidays: 9:00 AM - 4:00 PM</p>
-      </div>
-      <div class="footer-col">
-        <h3>Visit Us</h3>
-        <p><i class="ph ph-map-pin"></i> Area 43, Lilongwe</p>
-        <p><i class="ph ph-buildings"></i> Lilongwe, Malawi</p>
-        <p><i class="ph ph-phone"></i> +265 1 234 567</p>
-        <p><i class="ph ph-envelope"></i> hello@beanboutique.com</p>
-        <div class="map-container">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30834.123456!2d33.7741!3d-13.9626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1921a6c5b8c5e6b7%3A0x123456789abcdef!2sLilongwe!5e0!3m2!1sen!2smw!4v1700000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Bean Boutique location on Google Maps"></iframe>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Bean Boutique Coffee Shop. All rights reserved. | <a href="#" style="color:rgba(255,255,255,0.4);">Privacy Policy</a></p>
-    </div>
-  </footer>
+        <!-- Trust Badges -->
+        <section>
+            <div class="container">
+                <div class="card-grid" style="max-width: 800px; margin: 0 auto;">
+                    <div class="testimonial-card" data-aos="fade-up">
+                        <i class="fas fa-lock" style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                        <h3>Secure Checkout</h3>
+                        <p class="card-text">Your payment information is encrypted and protected.</p>
+                    </div>
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-truck" style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                        <h3>Free Shipping</h3>
+                        <p class="card-text">Free delivery on all orders over MWK 60,000 within Lilongwe.</p>
+                    </div>
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-undo" style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                        <h3>Easy Returns</h3>
+                        <p class="card-text">30-day hassle-free returns on all unopened products.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <script src="js/scripts.js"></script>
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3><i class="fas fa-mug-hot"></i> Bean Boutique</h3>
+                <p>Crafting exceptional coffee experiences since 2018. We source ethically, roast carefully, and brew with passion.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="coffee.html">Coffee Selection</a></p>
+                <p><a href="equipment.html">Brewing Equipment</a></p>
+                <p><a href="events.html">Events & Workshops</a></p>
+                <p><a href="offers.html">Special Offers</a></p>
+                <p><a href="cart.html">Shopping Cart</a></p>
+            </div>
+            <div class="footer-col">
+                <h3>Opening Hours</h3>
+                <p>Monday - Friday: 7:00 AM - 7:00 PM</p>
+                <p>Saturday: 8:00 AM - 8:00 PM</p>
+                <p>Sunday: 9:00 AM - 5:00 PM</p>
+                <p>Bank Holidays: 9:00 AM - 4:00 PM</p>
+            </div>
+            <div class="footer-col">
+                <h3>Visit Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Area 43, Lilongwe</p>
+                <p><i class="fas fa-city"></i> Lilongwe, Malawi</p>
+                <p><i class="fas fa-phone"></i> +265 1 234 567</p>
+                <p><i class="fas fa-envelope"></i> hello@beanboutique.com</p>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30834.123456!2d33.7741!3d-13.9626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1921a6c5b8c5e6b7%3A0x123456789abcdef!2sLilongwe!5e0!3m2!1sen!2smw!4v1700000000" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Bean Boutique location on Google Maps">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bean Boutique Coffee Shop. All rights reserved. | <a href="#" style="color: rgba(255,255,255,0.6);">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>

@@ -1,260 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Join Bean Boutique's coffee events, workshops, and tasting sessions.">
-  <title>Events & Workshops | Bean Boutique</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/phosphor-icons/1.4.2/css/phosphor.min.css">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join Bean Boutique's coffee events, workshops, and tasting sessions.">
+    <title>Events & Workshops | Bean Boutique</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <header class="nav-island">
-    <div class="nav-shell" id="navShell">
-      <a href="index.html" class="logo"><i class="ph ph-coffee"></i> Bean Boutique</a>
-      <button class="hamburger" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </header>
-
-  <div class="nav-overlay" id="navOverlay">
-    <ul class="nav-list">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="coffee.html">Coffee Selection</a></li>
-      <li><a href="equipment.html">Brewing Equipment</a></li>
-      <li><a href="events.html" class="active">Events</a></li>
-      <li><a href="offers.html">Offers &amp; Subscription</a></li>
-      <li><a href="cart.html">Cart <span class="cart-count" style="display:none; font-size:0.5em; vertical-align:super;">0</span></a></li>
-    </ul>
-  </div>
-
-  <main>
-    <section class="hero" style="min-height:60dvh;" aria-label="Events banner">
-      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1511920170033-f8396924c348?w=1920&q=80');"></div>
-      <div class="hero-overlay"></div>
-      <div class="hero-content reveal visible">
-        <span class="eyebrow">Learn &amp; Connect</span>
-        <h1>Events &amp; Workshops</h1>
-        <p>Learn, taste, and connect with fellow coffee enthusiasts at our exclusive events and hands-on workshops.</p>
-      </div>
-    </section>
-
-    <!-- UPCOMING EVENTS -->
-    <section class="bg-white">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="eyebrow">Book Your Spot</span>
-          <h2 class="section-title">Upcoming Events</h2>
-          <p class="section-subtitle">Reserve your spot today — spaces are limited</p>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="Bean Boutique Home">
+                <i class="fas fa-mug-hot"></i>
+                Bean Boutique
+            </a>
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="coffee.html">Coffee Selection</a></li>
+                    <li><a href="equipment.html">Brewing Equipment</a></li>
+                    <li><a href="events.html" class="active">Events</a></li>
+                    <li><a href="offers.html">Offers & Subscription</a></li>
+                    <li>
+                        <a href="cart.html" class="cart-icon" aria-label="Shopping Cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count" style="display: none;">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <div class="card-grid">
-          <article class="shell reveal reveal-delay-1">
-            <div class="core">
-              <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=400&q=80" alt="Latte Art Workshop" class="core-img">
-              <div class="core-body">
-                <h3 class="core-title">Latte Art Workshop</h3>
-                <div class="event-meta">
-                  <span><i class="ph ph-calendar"></i> Saturday, 15 August 2026</span>
-                  <span><i class="ph ph-clock"></i> 10:00 AM - 1:00 PM</span>
-                  <span><i class="ph ph-map-pin"></i> Bean Boutique Roastery</span>
-                  <span><i class="ph ph-users"></i> 12 seats available</span>
-                </div>
-                <p class="core-text">Master the art of milk steaming and pouring beautiful rosettas, hearts, and tulips. All equipment and milk provided.</p>
-                <p class="core-price">MWK 70,000</p>
-                <a href="#register" class="btn btn-primary btn-small" onclick="document.getElementById('eventName').value='Latte Art Workshop'">Register Now <span class="btn-icon"><i class="ph ph-arrow-up-right"></i></span></a>
-              </div>
+    <main>
+        <!-- Page Header -->
+        <section class="hero" style="height: 50vh; min-height: 300px;" aria-label="Events banner">
+            <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1511920170033-f8396924c348?w=1920&q=80');"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Events & Workshops</h1>
+                <p>Learn, taste, and connect with fellow coffee enthusiasts at our exclusive events and hands-on workshops.</p>
             </div>
-          </article>
+        </section>
 
-          <article class="shell reveal reveal-delay-2">
-            <div class="core">
-              <img src="https://images.unsplash.com/photo-1504630083234-14187a9df0f5?w=400&q=80" alt="Coffee Cupping Session" class="core-img">
-              <div class="core-body">
-                <h3 class="core-title">Single Origin Cupping</h3>
-                <div class="event-meta">
-                  <span><i class="ph ph-calendar"></i> Sunday, 23 August 2026</span>
-                  <span><i class="ph ph-clock"></i> 2:00 PM - 4:30 PM</span>
-                  <span><i class="ph ph-map-pin"></i> Bean Boutique Tasting Room</span>
-                  <span><i class="ph ph-users"></i> 8 seats available</span>
-                </div>
-                <p class="core-text">Taste and evaluate 6 unique single-origin coffees with our head roaster. Learn to identify flavour notes and aroma profiles.</p>
-                <p class="core-price">MWK 50,000</p>
-                <a href="#register" class="btn btn-primary btn-small" onclick="document.getElementById('eventName').value='Single Origin Cupping'">Register Now <span class="btn-icon"><i class="ph ph-arrow-up-right"></i></span></a>
-              </div>
-            </div>
-          </article>
+        <!-- Upcoming Events -->
+        <section class="bg-white">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Upcoming Events</h2>
+                <p class="section-subtitle" data-aos="fade-up">Reserve your spot today - spaces are limited</p>
+                
+                <div class="card-grid">
+                    <article class="event-card" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=400&q=80" alt="Latte Art Workshop" class="event-img">
+                        <div class="event-body">
+                            <h3 class="card-title">Latte Art Workshop</h3>
+                            <div class="event-meta">
+                                <span><i class="fas fa-calendar-alt"></i> Saturday, 15 August 2026</span>
+                                <span><i class="fas fa-clock"></i> 10:00 AM - 1:00 PM</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Bean Boutique Roastery</span>
+                                <span><i class="fas fa-users"></i> 12 seats available</span>
+                            </div>
+                            <p class="card-text">Master the art of milk steaming and pouring beautiful rosettas, hearts, and tulips. All equipment and milk provided.</p>
+                            <p class="card-price">MWK 70,000</p>
+                            <a href="#register" class="btn btn-primary btn-small" onclick="document.getElementById('eventName').value='Latte Art Workshop'">Register</a>
+                        </div>
+                    </article>
 
-          <article class="shell reveal reveal-delay-3">
-            <div class="core">
-              <img src="https://images.unsplash.com/photo-1442512595367-42736f9e51f9?w=400&q=80" alt="Home Brewing Masterclass" class="core-img">
-              <div class="core-body">
-                <h3 class="core-title">Home Brewing Masterclass</h3>
-                <div class="event-meta">
-                  <span><i class="ph ph-calendar"></i> Saturday, 5 September 2026</span>
-                  <span><i class="ph ph-clock"></i> 11:00 AM - 2:00 PM</span>
-                  <span><i class="ph ph-map-pin"></i> Bean Boutique Training Lab</span>
-                  <span><i class="ph ph-users"></i> 10 seats available</span>
-                </div>
-                <p class="core-text">Master V60, AeroPress, and French Press techniques. Take home a brewing guide and 250g of our House Blend.</p>
-                <p class="core-price">MWK 60,000</p>
-                <a href="#register" class="btn btn-primary btn-small" onclick="document.getElementById('eventName').value='Home Brewing Masterclass'">Register Now <span class="btn-icon"><i class="ph ph-arrow-up-right"></i></span></a>
-              </div>
-            </div>
-          </article>
+                    <article class="event-card" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://images.unsplash.com/photo-1504630083234-14187a9df0f5?w=400&q=80" alt="Coffee Cupping Session" class="event-img">
+                        <div class="event-body">
+                            <h3 class="card-title">Single Origin Cupping</h3>
+                            <div class="event-meta">
+                                <span><i class="fas fa-calendar-alt"></i> Sunday, 23 August 2026</span>
+                                <span><i class="fas fa-clock"></i> 2:00 PM - 4:30 PM</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Bean Boutique Tasting Room</span>
+                                <span><i class="fas fa-users"></i> 8 seats available</span>
+                            </div>
+                            <p class="card-text">Taste and evaluate 6 unique single-origin coffees with our head roaster. Learn to identify flavour notes and aroma profiles.</p>
+                            <p class="card-price">MWK 50,000</p>
+                            <a href="#register" class="btn btn-primary btn-small" onclick="document.getElementById('eventName').value='Single Origin Cupping'">Register</a>
+                        </div>
+                    </article>
 
-          <article class="shell reveal reveal-delay-1">
-            <div class="core">
-              <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&q=80" alt="Meet the Roaster" class="core-img">
-              <div class="core-body">
-                <h3 class="core-title">Meet the Roaster</h3>
-                <div class="event-meta">
-                  <span><i class="ph ph-calendar"></i> Friday, 18 September 2026</span>
-                  <span><i class="ph ph-clock"></i> 6:00 PM - 8:00 PM</span>
-                  <span><i class="ph ph-map-pin"></i> Bean Boutique Roastery</span>
-                  <span><i class="ph ph-users"></i> 20 seats available</span>
-                </div>
-                <p class="core-text">An evening with our head roaster exploring the journey from green bean to perfect roast. Includes tastings and Q&amp;A.</p>
-                <p class="core-price">MWK 40,000</p>
-                <a href="#register" class="btn btn-primary btn-small" onclick="document.getElementById('eventName').value='Meet the Roaster'">Register Now <span class="btn-icon"><i class="ph ph-arrow-up-right"></i></span></a>
-              </div>
-            </div>
-          </article>
+                    <article class="event-card" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://images.unsplash.com/photo-1442512595367-42736f9e51f9?w=400&q=80" alt="Home Brewing Masterclass" class="event-img">
+                        <div class="event-body">
+                            <h3 class="card-title">Home Brewing Masterclass</h3>
+                            <div class="event-meta">
+                                <span><i class="fas fa-calendar-alt"></i> Saturday, 5 September 2026</span>
+                                <span><i class="fas fa-clock"></i> 11:00 AM - 2:00 PM</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Bean Boutique Training Lab</span>
+                                <span><i class="fas fa-users"></i> 10 seats available</span>
+                            </div>
+                            <p class="card-text">Master V60, AeroPress, and French Press techniques. Take home a brewing guide and 250g of our House Blend.</p>
+                            <p class="card-price">MWK 60,000</p>
+                            <a href="#register" class="btn btn-primary btn-small" onclick="document.getElementById('eventName').value='Home Brewing Masterclass'">Register</a>
+                        </div>
+                    </article>
 
-          <article class="shell reveal reveal-delay-2">
-            <div class="core">
-              <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&q=80" alt="Espresso Fundamentals" class="core-img">
-              <div class="core-body">
-                <h3 class="core-title">Espresso Fundamentals</h3>
-                <div class="event-meta">
-                  <span><i class="ph ph-calendar"></i> Saturday, 26 September 2026</span>
-                  <span><i class="ph ph-clock"></i> 9:00 AM - 12:00 PM</span>
-                  <span><i class="ph ph-map-pin"></i> Bean Boutique Training Lab</span>
-                  <span><i class="ph ph-users"></i> 6 seats available</span>
-                </div>
-                <p class="core-text">Learn dial-in techniques, extraction theory, and milk steaming on professional espresso equipment. Small group intensive.</p>
-                <p class="core-price">MWK 90,000</p>
-                <a href="#register" class="btn btn-primary btn-small" onclick="document.getElementById('eventName').value='Espresso Fundamentals'">Register Now <span class="btn-icon"><i class="ph ph-arrow-up-right"></i></span></a>
-              </div>
-            </div>
-          </article>
+                    <article class="event-card" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&q=80" alt="Meet the Roaster" class="event-img">
+                        <div class="event-body">
+                            <h3 class="card-title">Meet the Roaster</h3>
+                            <div class="event-meta">
+                                <span><i class="fas fa-calendar-alt"></i> Friday, 18 September 2026</span>
+                                <span><i class="fas fa-clock"></i> 6:00 PM - 8:00 PM</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Bean Boutique Roastery</span>
+                                <span><i class="fas fa-users"></i> 20 seats available</span>
+                            </div>
+                            <p class="card-text">An evening with our head roaster exploring the journey from green bean to perfect roast. Includes tastings and Q&A.</p>
+                            <p class="card-price">MWK 40,000</p>
+                            <a href="#register" class="btn btn-primary btn-small" onclick="document.getElementById('eventName').value='Meet the Roaster'">Register</a>
+                        </div>
+                    </article>
 
-          <article class="shell reveal reveal-delay-3">
-            <div class="core">
-              <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&q=80" alt="Coffee & Chocolate Pairing" class="core-img">
-              <div class="core-body">
-                <h3 class="core-title">Coffee &amp; Chocolate Pairing</h3>
-                <div class="event-meta">
-                  <span><i class="ph ph-calendar"></i> Sunday, 4 October 2026</span>
-                  <span><i class="ph ph-clock"></i> 3:00 PM - 5:00 PM</span>
-                  <span><i class="ph ph-map-pin"></i> Bean Boutique Tasting Room</span>
-                  <span><i class="ph ph-users"></i> 14 seats available</span>
+                    <article class="event-card" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&q=80" alt="Espresso Fundamentals" class="event-img">
+                        <div class="event-body">
+                            <h3 class="card-title">Espresso Fundamentals</h3>
+                            <div class="event-meta">
+                                <span><i class="fas fa-calendar-alt"></i> Saturday, 26 September 2026</span>
+                                <span><i class="fas fa-clock"></i> 9:00 AM - 12:00 PM</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Bean Boutique Training Lab</span>
+                                <span><i class="fas fa-users"></i> 6 seats available</span>
+                            </div>
+                            <p class="card-text">Learn dial-in techniques, extraction theory, and milk steaming on professional espresso equipment. Small group intensive.</p>
+                            <p class="card-price">MWK 90,000</p>
+                            <a href="#register" class="btn btn-primary btn-small" onclick="document.getElementById('eventName').value='Espresso Fundamentals'">Register</a>
+                        </div>
+                    </article>
+
+                    <article class="event-card" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&q=80" alt="Coffee & Chocolate Pairing" class="event-img">
+                        <div class="event-body">
+                            <h3 class="card-title">Coffee & Chocolate Pairing</h3>
+                            <div class="event-meta">
+                                <span><i class="fas fa-calendar-alt"></i> Sunday, 4 October 2026</span>
+                                <span><i class="fas fa-clock"></i> 3:00 PM - 5:00 PM</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Bean Boutique Tasting Room</span>
+                                <span><i class="fas fa-users"></i> 14 seats available</span>
+                            </div>
+                            <p class="card-text">Discover how different origins pair with artisan chocolates. A sensory journey led by our certified Q Grader.</p>
+                            <p class="card-price">MWK 56,000</p>
+                            <a href="#register" class="btn btn-primary btn-small" onclick="document.getElementById('eventName').value='Coffee & Chocolate Pairing'">Register</a>
+                        </div>
+                    </article>
                 </div>
-                <p class="core-text">Discover how different origins pair with artisan chocolates. A sensory journey led by our certified Q Grader.</p>
-                <p class="core-price">MWK 56,000</p>
-                <a href="#register" class="btn btn-primary btn-small" onclick="document.getElementById('eventName').value='Coffee & Chocolate Pairing'">Register Now <span class="btn-icon"><i class="ph ph-arrow-up-right"></i></span></a>
-              </div>
             </div>
-          </article>
+        </section>
+
+        <!-- Registration Form -->
+        <section id="register">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Event Registration</h2>
+                <p class="section-subtitle" data-aos="fade-up">Secure your place at one of our upcoming events</p>
+                
+                <div style="max-width: 600px; margin: 0 auto; background-color: var(--white); padding: 2.5rem; border-radius: var(--radius); box-shadow: 0 5px 20px var(--shadow);" data-aos="fade-up">
+                    <form id="eventRegistration">
+                        <div class="form-group">
+                            <label for="eventName">Select Event</label>
+                            <select id="eventName" name="eventName" required aria-required="true">
+                                <option value="">-- Choose an event --</option>
+                                <option value="Latte Art Workshop">Latte Art Workshop - MWK 70,000</option>
+                                <option value="Single Origin Cupping">Single Origin Cupping - MWK 50,000</option>
+                                <option value="Home Brewing Masterclass">Home Brewing Masterclass - MWK 60,000</option>
+                                <option value="Meet the Roaster">Meet the Roaster - MWK 40,000</option>
+                                <option value="Espresso Fundamentals">Espresso Fundamentals - MWK 90,000</option>
+                                <option value="Coffee & Chocolate Pairing">Coffee & Chocolate Pairing - MWK 56,000</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required aria-required="true">
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Registration</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3><i class="fas fa-mug-hot"></i> Bean Boutique</h3>
+                <p>Crafting exceptional coffee experiences since 2018. We source ethically, roast carefully, and brew with passion.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="coffee.html">Coffee Selection</a></p>
+                <p><a href="equipment.html">Brewing Equipment</a></p>
+                <p><a href="events.html">Events & Workshops</a></p>
+                <p><a href="offers.html">Special Offers</a></p>
+                <p><a href="cart.html">Shopping Cart</a></p>
+            </div>
+            <div class="footer-col">
+                <h3>Opening Hours</h3>
+                <p>Monday - Friday: 7:00 AM - 7:00 PM</p>
+                <p>Saturday: 8:00 AM - 8:00 PM</p>
+                <p>Sunday: 9:00 AM - 5:00 PM</p>
+                <p>Bank Holidays: 9:00 AM - 4:00 PM</p>
+            </div>
+            <div class="footer-col">
+                <h3>Visit Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Area 43, Lilongwe</p>
+                <p><i class="fas fa-city"></i> Lilongwe, Malawi</p>
+                <p><i class="fas fa-phone"></i> +265 1 234 567</p>
+                <p><i class="fas fa-envelope"></i> hello@beanboutique.com</p>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30834.123456!2d33.7741!3d-13.9626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1921a6c5b8c5e6b7%3A0x123456789abcdef!2sLilongwe!5e0!3m2!1sen!2smw!4v1700000000" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Bean Boutique location on Google Maps">
+                    </iframe>
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
-
-    <!-- REGISTRATION FORM -->
-    <section id="register" class="bg-cream">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="eyebrow">Secure Your Spot</span>
-          <h2 class="section-title">Event Registration</h2>
-          <p class="section-subtitle">Fill in your details and we'll confirm your place within 24 hours.</p>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bean Boutique Coffee Shop. All rights reserved. | <a href="#" style="color: rgba(255,255,255,0.6);">Privacy Policy</a></p>
         </div>
+    </footer>
 
-        <div class="shell reveal" style="max-width:560px; margin:0 auto;">
-          <div class="core" style="padding:2.5rem;">
-            <form id="eventRegistration">
-              <div class="form-group">
-                <label for="eventName">Select Event</label>
-                <select id="eventName" name="eventName" required aria-required="true">
-                  <option value="">— Choose an event —</option>
-                  <option value="Latte Art Workshop">Latte Art Workshop - MWK 70,000</option>
-                  <option value="Single Origin Cupping">Single Origin Cupping - MWK 50,000</option>
-                  <option value="Home Brewing Masterclass">Home Brewing Masterclass - MWK 60,000</option>
-                  <option value="Meet the Roaster">Meet the Roaster - MWK 40,000</option>
-                  <option value="Espresso Fundamentals">Espresso Fundamentals - MWK 90,000</option>
-                  <option value="Coffee & Chocolate Pairing">Coffee &amp; Chocolate Pairing - MWK 56,000</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="firstName">First Name</label>
-                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required aria-required="true">
-              </div>
-              <div class="form-group">
-                <label for="lastName">Last Name</label>
-                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required aria-required="true">
-              </div>
-              <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="your@email.com" required aria-required="true">
-              </div>
-              <button type="submit" class="btn btn-primary" style="width:100%;">Submit Registration <span class="btn-icon"><i class="ph ph-arrow-right"></i></span></button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h3><i class="ph ph-coffee"></i> Bean Boutique</h3>
-        <p>Crafting exceptional coffee experiences since 2018. We source ethically, roast carefully, and brew with passion.</p>
-        <div class="footer-social">
-          <a href="#" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
-          <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
-          <a href="#" aria-label="Twitter"><i class="ph ph-twitter-logo"></i></a>
-          <a href="#" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h3>Quick Links</h3>
-        <p><a href="index.html">Home</a></p>
-        <p><a href="coffee.html">Coffee Selection</a></p>
-        <p><a href="equipment.html">Brewing Equipment</a></p>
-        <p><a href="events.html">Events &amp; Workshops</a></p>
-        <p><a href="offers.html">Special Offers</a></p>
-        <p><a href="cart.html">Shopping Cart</a></p>
-      </div>
-      <div class="footer-col">
-        <h3>Opening Hours</h3>
-        <p>Monday - Friday: 7:00 AM - 7:00 PM</p>
-        <p>Saturday: 8:00 AM - 8:00 PM</p>
-        <p>Sunday: 9:00 AM - 5:00 PM</p>
-        <p>Bank Holidays: 9:00 AM - 4:00 PM</p>
-      </div>
-      <div class="footer-col">
-        <h3>Visit Us</h3>
-        <p><i class="ph ph-map-pin"></i> Area 43, Lilongwe</p>
-        <p><i class="ph ph-buildings"></i> Lilongwe, Malawi</p>
-        <p><i class="ph ph-phone"></i> +265 1 234 567</p>
-        <p><i class="ph ph-envelope"></i> hello@beanboutique.com</p>
-        <div class="map-container">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30834.123456!2d33.7741!3d-13.9626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1921a6c5b8c5e6b7%3A0x123456789abcdef!2sLilongwe!5e0!3m2!1sen!2smw!4v1700000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Bean Boutique location on Google Maps"></iframe>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Bean Boutique Coffee Shop. All rights reserved. | <a href="#" style="color:rgba(255,255,255,0.4);">Privacy Policy</a></p>
-    </div>
-  </footer>
-
-  <script src="js/scripts.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>

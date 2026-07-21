@@ -1,310 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Special offers, membership plans, and coffee subscription services at Bean Boutique.">
-  <title>Offers & Subscription | Bean Boutique</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/phosphor-icons/1.4.2/css/phosphor.min.css">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Special offers, membership plans, and coffee subscription services at Bean Boutique.">
+    <title>Offers & Subscription | Bean Boutique</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <header class="nav-island">
-    <div class="nav-shell" id="navShell">
-      <a href="index.html" class="logo"><i class="ph ph-coffee"></i> Bean Boutique</a>
-      <button class="hamburger" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </header>
-
-  <div class="nav-overlay" id="navOverlay">
-    <ul class="nav-list">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="coffee.html">Coffee Selection</a></li>
-      <li><a href="equipment.html">Brewing Equipment</a></li>
-      <li><a href="events.html">Events</a></li>
-      <li><a href="offers.html" class="active">Offers &amp; Subscription</a></li>
-      <li><a href="cart.html">Cart <span class="cart-count" style="display:none; font-size:0.5em; vertical-align:super;">0</span></a></li>
-    </ul>
-  </div>
-
-  <main>
-    <section class="hero" style="min-height:60dvh;" aria-label="Offers and subscription banner">
-      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1920&q=80');"></div>
-      <div class="hero-overlay"></div>
-      <div class="hero-content reveal visible">
-        <span class="eyebrow">Exclusive Deals</span>
-        <h1>Special Offers &amp; Subscriptions</h1>
-        <p>Exclusive deals, membership perks, and curated coffee delivered to your door every month.</p>
-      </div>
-    </section>
-
-    <!-- SPECIAL OFFERS -->
-    <section class="bg-white">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="eyebrow">Limited Time</span>
-          <h2 class="section-title">Current Special Offers</h2>
-          <p class="section-subtitle">Limited time deals on our favourite products</p>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="Bean Boutique Home">
+                <i class="fas fa-mug-hot"></i>
+                Bean Boutique
+            </a>
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="coffee.html">Coffee Selection</a></li>
+                    <li><a href="equipment.html">Brewing Equipment</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="offers.html" class="active">Offers & Subscription</a></li>
+                    <li>
+                        <a href="cart.html" class="cart-icon" aria-label="Shopping Cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count" style="display: none;">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <div class="products-grid">
-          <article class="shell reveal reveal-delay-1">
-            <div class="core">
-              <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=400&q=80" alt="Starter Bundle" class="core-img">
-              <div class="core-body">
-                <h3 class="core-title">Beginner's Brewing Bundle</h3>
-                <p class="core-text">Everything you need to start your home brewing journey: V60 dripper, filters, 250g House Blend, and a brewing guide.</p>
-                <p class="core-price"><s style="color:var(--mocha); font-size:1rem; margin-right:0.5rem;">MWK 90,000</s> MWK 66,000</p>
-                <button class="btn-add" data-id="offer-bundle" onclick="addToCart('offer-bundle', 'Beginner Brewing Bundle', 66000, 'https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=400&q=80')">Add to Cart <i class="ph ph-shopping-cart"></i></button>
-              </div>
+    <main>
+        <!-- Page Header -->
+        <section class="hero" style="height: 50vh; min-height: 300px;" aria-label="Offers and subscription banner">
+            <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1920&q=80');"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Special Offers & Subscriptions</h1>
+                <p>Exclusive deals, membership perks, and curated coffee delivered to your door every month.</p>
             </div>
-          </article>
+        </section>
 
-          <article class="shell reveal reveal-delay-2">
-            <div class="core">
-              <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefda?w=400&q=80" alt="Summer Roast" class="core-img">
-              <div class="core-body">
-                <h3 class="core-title">Summer Seasonal Roast</h3>
-                <p class="core-text">Limited edition light roast with bright citrus and floral notes. Perfect for cold brew and iced coffee season.</p>
-                <p class="core-price"><s style="color:var(--mocha); font-size:1rem; margin-right:0.5rem;">MWK 30,000</s> MWK 24,000</p>
-                <button class="btn-add" data-id="offer-summer" onclick="addToCart('offer-summer', 'Summer Seasonal Roast', 24000, 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefda?w=400&q=80')">Add to Cart <i class="ph ph-shopping-cart"></i></button>
-              </div>
-            </div>
-          </article>
+        <!-- Special Offers -->
+        <section class="bg-white">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Current Special Offers</h2>
+                <p class="section-subtitle" data-aos="fade-up">Limited time deals on our favourite products</p>
+                
+                <div class="products-grid">
+                    <article class="card product-card" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=400&q=80" alt="Starter Bundle" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Beginner's Brewing Bundle</h3>
+                            <p class="card-text">Everything you need to start your home brewing journey: V60 dripper, filters, 250g House Blend, and a brewing guide.</p>
+                            <p class="card-price"><s style="color: var(--gray); font-size: 1rem;">MWK 90,000</s> MWK 66,000</p>
+                            <button class="btn-add" data-id="offer-bundle" onclick="addToCart('offer-bundle', 'Beginner Brewing Bundle', 66000, 'https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=400&q=80')">Add to Cart</button>
+                        </div>
+                    </article>
 
-          <article class="shell reveal reveal-delay-3">
-            <div class="core">
-              <img src="https://images.unsplash.com/photo-1517080319669-955c2a4e43b7?w=400&q=80" alt="Grinder Sale" class="core-img">
-              <div class="core-body">
-                <h3 class="core-title">Baratza Encore — Refurbished</h3>
-                <p class="core-text">Factory-refurbished Encore grinder with full 1-year warranty. Professionally serviced and tested.</p>
-                <p class="core-price"><s style="color:var(--mocha); font-size:1rem; margin-right:0.5rem;">MWK 280,000</s> MWK 200,000</p>
-                <button class="btn-add" data-id="offer-grinder" onclick="addToCart('offer-grinder', 'Baratza Encore Refurbished', 200000, 'https://images.unsplash.com/photo-1517080319669-955c2a4e43b7?w=400&q=80')">Add to Cart <i class="ph ph-shopping-cart"></i></button>
-              </div>
-            </div>
-          </article>
+                    <article class="card product-card" data-aos="fade-up" data-aos-delay="50">
+                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefda?w=400&q=80" alt="Summer Roast" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Summer Seasonal Roast</h3>
+                            <p class="card-text">Limited edition light roast with bright citrus and floral notes. Perfect for cold brew and iced coffee season.</p>
+                            <p class="card-price"><s style="color: var(--gray); font-size: 1rem;">MWK 30,000</s> MWK 24,000</p>
+                            <button class="btn-add" data-id="offer-summer" onclick="addToCart('offer-summer', 'Summer Seasonal Roast', 24000, 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefda?w=400&q=80')">Add to Cart</button>
+                        </div>
+                    </article>
 
-          <article class="shell reveal reveal-delay-4">
-            <div class="core">
-              <img src="https://images.unsplash.com/photo-1504630083234-14187a9df0f5?w=400&q=80" alt="Workshop Discount" class="core-img">
-              <div class="core-body">
-                <h3 class="core-title">Workshop Duo Pass</h3>
-                <p class="core-text">Book any two workshops and save 20%. Perfect for couples or friends who want to learn together.</p>
-                <p class="core-price"><s style="color:var(--mocha); font-size:1rem; margin-right:0.5rem;">MWK 140,000</s> MWK 112,000</p>
-                <button class="btn-add" data-id="offer-workshop" onclick="addToCart('offer-workshop', 'Workshop Duo Pass', 112000, 'https://images.unsplash.com/photo-1504630083234-14187a9df0f5?w=400&q=80')">Add to Cart <i class="ph ph-shopping-cart"></i></button>
-              </div>
+                    <article class="card product-card" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://images.unsplash.com/photo-1517080319669-955c2a4e43b7?w=400&q=80" alt="Grinder Sale" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Baratza Encore - Refurbished</h3>
+                            <p class="card-text">Factory-refurbished Encore grinder with full 1-year warranty. Professionally serviced and tested.</p>
+                            <p class="card-price"><s style="color: var(--gray); font-size: 1rem;">MWK 280,000</s> MWK 200,000</p>
+                            <button class="btn-add" data-id="offer-grinder" onclick="addToCart('offer-grinder', 'Baratza Encore Refurbished', 200000, 'https://images.unsplash.com/photo-1517080319669-955c2a4e43b7?w=400&q=80')">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <article class="card product-card" data-aos="fade-up" data-aos-delay="150">
+                        <img src="https://images.unsplash.com/photo-1504630083234-14187a9df0f5?w=400&q=80" alt="Workshop Discount" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Workshop Duo Pass</h3>
+                            <p class="card-text">Book any two workshops and save 20%. Perfect for couples or friends who want to learn together.</p>
+                            <p class="card-price"><s style="color: var(--gray); font-size: 1rem;">MWK 140,000</s> MWK 112,000</p>
+                            <button class="btn-add" data-id="offer-workshop" onclick="addToCart('offer-workshop', 'Workshop Duo Pass', 112000, 'https://images.unsplash.com/photo-1504630083234-14187a9df0f5?w=400&q=80')">Add to Cart</button>
+                        </div>
+                    </article>
+                </div>
             </div>
-          </article>
+        </section>
+
+        <!-- Membership Plans -->
+        <section>
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Membership Plans</h2>
+                <p class="section-subtitle" data-aos="fade-up">Join the Bean Boutique community and enjoy exclusive perks</p>
+                
+                <div class="pricing-grid">
+                    <article class="pricing-card" data-aos="fade-up">
+                        <h3>Bronze</h3>
+                        <p class="pricing-price">Free</p>
+                        <p style="color: var(--gray); margin-bottom: 1rem;">Perfect for casual coffee lovers</p>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Newsletter with brewing tips</li>
+                            <li><i class="fas fa-check"></i> Early access to seasonal roasts</li>
+                            <li><i class="fas fa-check"></i> Birthday discount (10% off)</li>
+                            <li><i class="fas fa-check"></i> Member-only event invitations</li>
+                            <li style="color: var(--light-gray);"><i class="fas fa-times"></i> Free shipping</li>
+                            <li style="color: var(--light-gray);"><i class="fas fa-times"></i> Monthly coffee box</li>
+                        </ul>
+                        <a href="#subscribe" class="btn btn-outline" style="width: 100%;">Join Free</a>
+                    </article>
+
+                    <article class="pricing-card featured" data-aos="fade-up" data-aos-delay="100">
+                        <span class="pricing-badge">Most Popular</span>
+                        <h3>Silver</h3>
+                        <p class="pricing-price">MWK 30,000<span>/month</span></p>
+                        <p style="color: var(--gray); margin-bottom: 1rem;">For the dedicated home barista</p>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Bronze benefits</li>
+                            <li><i class="fas fa-check"></i> Free delivery within Lilongwe</li>
+                            <li><i class="fas fa-check"></i> Monthly 250g curated coffee box</li>
+                            <li><i class="fas fa-check"></i> 15% off all equipment</li>
+                            <li><i class="fas fa-check"></i> Priority workshop booking</li>
+                            <li style="color: var(--light-gray);"><i class="fas fa-times"></i> Quarterly equipment gift</li>
+                        </ul>
+                        <a href="#subscribe" class="btn btn-primary" style="width: 100%;" onclick="document.getElementById('planSelect').value='silver'">Subscribe</a>
+                    </article>
+
+                    <article class="pricing-card" data-aos="fade-up" data-aos-delay="200">
+                        <h3>Gold</h3>
+                        <p class="pricing-price">MWK 60,000<span>/month</span></p>
+                        <p style="color: var(--gray); margin-bottom: 1rem;">The ultimate coffee experience</p>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> All Silver benefits</li>
+                            <li><i class="fas fa-check"></i> Monthly 500g curated coffee box</li>
+                            <li><i class="fas fa-check"></i> 20% off all equipment</li>
+                            <li><i class="fas fa-check"></i> Free entry to monthly cupping</li>
+                            <li><i class="fas fa-check"></i> Quarterly brewing equipment gift</li>
+                            <li><i class="fas fa-check"></i> Dedicated coffee concierge</li>
+                        </ul>
+                        <a href="#subscribe" class="btn btn-outline" style="width: 100%;" onclick="document.getElementById('planSelect').value='gold'">Subscribe</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Subscription Form -->
+        <section class="bg-white" id="subscribe">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Start Your Subscription</h2>
+                <p class="section-subtitle" data-aos="fade-up">Freshly roasted coffee delivered to your door</p>
+                
+                <div style="max-width: 600px; margin: 0 auto; background-color: var(--white); padding: 2.5rem; border-radius: var(--radius); box-shadow: 0 5px 20px var(--shadow);" data-aos="fade-up">
+                    <form id="subscriptionForm">
+                        <div class="form-group">
+                            <label for="planSelect">Select Your Plan</label>
+                            <select id="planSelect" name="plan" required aria-required="true">
+                                <option value="">-- Choose a plan --</option>
+                                <option value="bronze">Bronze - Free</option>
+                                <option value="silver">Silver - MWK 30,000/month</option>
+                                <option value="gold">Gold - MWK 60,000/month</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="subFirstName">First Name</label>
+                            <input type="text" id="subFirstName" name="firstName" placeholder="Enter your first name" required aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="subLastName">Last Name</label>
+                            <input type="text" id="subLastName" name="lastName" placeholder="Enter your last name" required aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="subEmail">Email Address</label>
+                            <input type="email" id="subEmail" name="email" placeholder="your@email.com" required aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="subAddress">Delivery Address</label>
+                            <textarea id="subAddress" name="address" rows="3" placeholder="Enter your full delivery address" required aria-required="true"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="subPreference">Coffee Preference</label>
+                            <select id="subPreference" name="preference">
+                                <option value="surprise">Surprise Me (Roaster's Choice)</option>
+                                <option value="light">Light Roasts Only</option>
+                                <option value="medium">Medium Roasts Only</option>
+                                <option value="dark">Dark Roasts Only</option>
+                                <option value="single">Single Origins Only</option>
+                                <option value="blend">Blends Only</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Start My Subscription</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section>
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Why Subscribe?</h2>
+                <div class="card-grid" style="max-width: 900px; margin: 0 auto;">
+                    <div class="testimonial-card" data-aos="fade-up">
+                        <i class="fas fa-leaf" style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                        <h3>Freshly Roasted</h3>
+                        <p class="card-text">All subscription coffees are roasted within 48 hours of shipping, ensuring peak flavour and aroma.</p>
+                    </div>
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-globe" style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                        <h3>Explore the World</h3>
+                        <p class="card-text">Discover new origins every month. From Ethiopian highlands to Colombian valleys, travel through coffee.</p>
+                    </div>
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-piggy-bank" style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                        <h3>Save Money</h3>
+                        <p class="card-text">Subscribers save up to 25% compared to individual purchases. Plus free shipping on Silver and Gold plans.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3><i class="fas fa-mug-hot"></i> Bean Boutique</h3>
+                <p>Crafting exceptional coffee experiences since 2018. We source ethically, roast carefully, and brew with passion.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="coffee.html">Coffee Selection</a></p>
+                <p><a href="equipment.html">Brewing Equipment</a></p>
+                <p><a href="events.html">Events & Workshops</a></p>
+                <p><a href="offers.html">Special Offers</a></p>
+                <p><a href="cart.html">Shopping Cart</a></p>
+            </div>
+            <div class="footer-col">
+                <h3>Opening Hours</h3>
+                <p>Monday - Friday: 7:00 AM - 7:00 PM</p>
+                <p>Saturday: 8:00 AM - 8:00 PM</p>
+                <p>Sunday: 9:00 AM - 5:00 PM</p>
+                <p>Bank Holidays: 9:00 AM - 4:00 PM</p>
+            </div>
+            <div class="footer-col">
+                <h3>Visit Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Area 43, Lilongwe</p>
+                <p><i class="fas fa-city"></i> Lilongwe, Malawi</p>
+                <p><i class="fas fa-phone"></i> +265 1 234 567</p>
+                <p><i class="fas fa-envelope"></i> hello@beanboutique.com</p>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30834.123456!2d33.7741!3d-13.9626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1921a6c5b8c5e6b7%3A0x123456789abcdef!2sLilongwe!5e0!3m2!1sen!2smw!4v1700000000" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Bean Boutique location on Google Maps">
+                    </iframe>
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
-
-    <!-- MEMBERSHIP PLANS -->
-    <section class="bg-cream">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="eyebrow">Join the Club</span>
-          <h2 class="section-title">Membership Plans</h2>
-          <p class="section-subtitle">Join the Bean Boutique community and enjoy exclusive perks</p>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bean Boutique Coffee Shop. All rights reserved. | <a href="#" style="color: rgba(255,255,255,0.6);">Privacy Policy</a></p>
         </div>
+    </footer>
 
-        <div class="pricing-grid">
-          <article class="pricing-card shell reveal reveal-delay-1">
-            <div class="core" style="padding:2.5rem 2rem; text-align:center;">
-              <h3 style="font-family:var(--font-sans); font-weight:600; font-size:1.1rem; letter-spacing:0;">Bronze</h3>
-              <p class="pricing-price">Free</p>
-              <p style="color:var(--mocha); margin-bottom:1.25rem; font-size:0.925rem;">Perfect for casual coffee lovers</p>
-              <ul class="pricing-features">
-                <li><i class="ph ph-check"></i> Newsletter with brewing tips</li>
-                <li><i class="ph ph-check"></i> Early access to seasonal roasts</li>
-                <li><i class="ph ph-check"></i> Birthday discount (10% off)</li>
-                <li><i class="ph ph-check"></i> Member-only event invitations</li>
-                <li class="muted"><i class="ph ph-x"></i> Free shipping</li>
-                <li class="muted"><i class="ph ph-x"></i> Monthly coffee box</li>
-              </ul>
-              <a href="#subscribe" class="btn btn-outline" style="width:100%;">Join Free</a>
-            </div>
-          </article>
-
-          <article class="pricing-card featured shell reveal reveal-delay-2" style="background:rgba(184,145,110,0.1); border-color:rgba(184,145,110,0.2);">
-            <div class="core" style="padding:2.5rem 2rem; text-align:center;">
-              <span class="pricing-badge">Most Popular</span>
-              <h3 style="font-family:var(--font-sans); font-weight:600; font-size:1.1rem; letter-spacing:0;">Silver</h3>
-              <p class="pricing-price">MWK 30,000<span>/month</span></p>
-              <p style="color:var(--mocha); margin-bottom:1.25rem; font-size:0.925rem;">For the dedicated home barista</p>
-              <ul class="pricing-features">
-                <li><i class="ph ph-check"></i> All Bronze benefits</li>
-                <li><i class="ph ph-check"></i> Free delivery within Lilongwe</li>
-                <li><i class="ph ph-check"></i> Monthly 250g curated coffee box</li>
-                <li><i class="ph ph-check"></i> 15% off all equipment</li>
-                <li><i class="ph ph-check"></i> Priority workshop booking</li>
-                <li class="muted"><i class="ph ph-x"></i> Quarterly equipment gift</li>
-              </ul>
-              <a href="#subscribe" class="btn btn-primary" style="width:100%;" onclick="document.getElementById('planSelect').value='silver'">Subscribe <span class="btn-icon"><i class="ph ph-arrow-right"></i></span></a>
-            </div>
-          </article>
-
-          <article class="pricing-card shell reveal reveal-delay-3">
-            <div class="core" style="padding:2.5rem 2rem; text-align:center;">
-              <h3 style="font-family:var(--font-sans); font-weight:600; font-size:1.1rem; letter-spacing:0;">Gold</h3>
-              <p class="pricing-price">MWK 60,000<span>/month</span></p>
-              <p style="color:var(--mocha); margin-bottom:1.25rem; font-size:0.925rem;">The ultimate coffee experience</p>
-              <ul class="pricing-features">
-                <li><i class="ph ph-check"></i> All Silver benefits</li>
-                <li><i class="ph ph-check"></i> Monthly 500g curated coffee box</li>
-                <li><i class="ph ph-check"></i> 20% off all equipment</li>
-                <li><i class="ph ph-check"></i> Free entry to monthly cupping</li>
-                <li><i class="ph ph-check"></i> Quarterly brewing equipment gift</li>
-                <li><i class="ph ph-check"></i> Dedicated coffee concierge</li>
-              </ul>
-              <a href="#subscribe" class="btn btn-outline" style="width:100%;" onclick="document.getElementById('planSelect').value='gold'">Subscribe <span class="btn-icon"><i class="ph ph-arrow-up-right"></i></span></a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SUBSCRIPTION FORM -->
-    <section class="bg-white" id="subscribe">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="eyebrow">Get Started</span>
-          <h2 class="section-title">Start Your Subscription</h2>
-          <p class="section-subtitle">Freshly roasted coffee delivered to your door</p>
-        </div>
-
-        <div class="shell reveal" style="max-width:560px; margin:0 auto;">
-          <div class="core" style="padding:2.5rem;">
-            <form id="subscriptionForm">
-              <div class="form-group">
-                <label for="planSelect">Select Your Plan</label>
-                <select id="planSelect" name="plan" required aria-required="true">
-                  <option value="">— Choose a plan —</option>
-                  <option value="bronze">Bronze - Free</option>
-                  <option value="silver">Silver - MWK 30,000/month</option>
-                  <option value="gold">Gold - MWK 60,000/month</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="subFirstName">First Name</label>
-                <input type="text" id="subFirstName" name="firstName" placeholder="Enter your first name" required aria-required="true">
-              </div>
-              <div class="form-group">
-                <label for="subLastName">Last Name</label>
-                <input type="text" id="subLastName" name="lastName" placeholder="Enter your last name" required aria-required="true">
-              </div>
-              <div class="form-group">
-                <label for="subEmail">Email Address</label>
-                <input type="email" id="subEmail" name="email" placeholder="your@email.com" required aria-required="true">
-              </div>
-              <div class="form-group">
-                <label for="subAddress">Delivery Address</label>
-                <textarea id="subAddress" name="address" rows="3" placeholder="Enter your full delivery address" required aria-required="true"></textarea>
-              </div>
-              <div class="form-group">
-                <label for="subPreference">Coffee Preference</label>
-                <select id="subPreference" name="preference">
-                  <option value="surprise">Surprise Me (Roaster's Choice)</option>
-                  <option value="light">Light Roasts Only</option>
-                  <option value="medium">Medium Roasts Only</option>
-                  <option value="dark">Dark Roasts Only</option>
-                  <option value="single">Single Origins Only</option>
-                  <option value="blend">Blends Only</option>
-                </select>
-              </div>
-              <button type="submit" class="btn btn-primary" style="width:100%;">Start My Subscription <span class="btn-icon"><i class="ph ph-arrow-right"></i></span></button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- BENEFITS -->
-    <section class="bg-cream">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="eyebrow">Why Subscribe?</span>
-          <h2 class="section-title">The Bean Boutique Difference</h2>
-        </div>
-        <div class="card-grid" style="max-width:900px; margin:0 auto;">
-          <article class="shell reveal reveal-delay-1">
-            <div class="core testimonial-card">
-              <i class="ph ph-leaf" style="font-size:2rem; color:var(--caramel); margin-bottom:1rem; display:block;"></i>
-              <h3 style="font-family:var(--font-display); font-size:1.25rem; margin-bottom:0.5rem;">Freshly Roasted</h3>
-              <p class="core-text">All subscription coffees are roasted within 48 hours of shipping, ensuring peak flavour and aroma.</p>
-            </div>
-          </article>
-          <article class="shell reveal reveal-delay-2">
-            <div class="core testimonial-card">
-              <i class="ph ph-globe" style="font-size:2rem; color:var(--caramel); margin-bottom:1rem; display:block;"></i>
-              <h3 style="font-family:var(--font-display); font-size:1.25rem; margin-bottom:0.5rem;">Explore the World</h3>
-              <p class="core-text">Discover new origins every month. From Ethiopian highlands to Colombian valleys, travel through coffee.</p>
-            </div>
-          </article>
-          <article class="shell reveal reveal-delay-3">
-            <div class="core testimonial-card">
-              <i class="ph ph-currency-circle-dollar" style="font-size:2rem; color:var(--caramel); margin-bottom:1rem; display:block;"></i>
-              <h3 style="font-family:var(--font-display); font-size:1.25rem; margin-bottom:0.5rem;">Save Money</h3>
-              <p class="core-text">Subscribers save up to 25% compared to individual purchases. Plus free shipping on Silver and Gold plans.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h3><i class="ph ph-coffee"></i> Bean Boutique</h3>
-        <p>Crafting exceptional coffee experiences since 2018. We source ethically, roast carefully, and brew with passion.</p>
-        <div class="footer-social">
-          <a href="#" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
-          <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
-          <a href="#" aria-label="Twitter"><i class="ph ph-twitter-logo"></i></a>
-          <a href="#" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h3>Quick Links</h3>
-        <p><a href="index.html">Home</a></p>
-        <p><a href="coffee.html">Coffee Selection</a></p>
-        <p><a href="equipment.html">Brewing Equipment</a></p>
-        <p><a href="events.html">Events &amp; Workshops</a></p>
-        <p><a href="offers.html">Special Offers</a></p>
-        <p><a href="cart.html">Shopping Cart</a></p>
-      </div>
-      <div class="footer-col">
-        <h3>Opening Hours</h3>
-        <p>Monday - Friday: 7:00 AM - 7:00 PM</p>
-        <p>Saturday: 8:00 AM - 8:00 PM</p>
-        <p>Sunday: 9:00 AM - 5:00 PM</p>
-        <p>Bank Holidays: 9:00 AM - 4:00 PM</p>
-      </div>
-      <div class="footer-col">
-        <h3>Visit Us</h3>
-        <p><i class="ph ph-map-pin"></i> Area 43, Lilongwe</p>
-        <p><i class="ph ph-buildings"></i> Lilongwe, Malawi</p>
-        <p><i class="ph ph-phone"></i> +265 1 234 567</p>
-        <p><i class="ph ph-envelope"></i> hello@beanboutique.com</p>
-        <div class="map-container">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30834.123456!2d33.7741!3d-13.9626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1921a6c5b8c5e6b7%3A0x123456789abcdef!2sLilongwe!5e0!3m2!1sen!2smw!4v1700000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Bean Boutique location on Google Maps"></iframe>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Bean Boutique Coffee Shop. All rights reserved. | <a href="#" style="color:rgba(255,255,255,0.4);">Privacy Policy</a></p>
-    </div>
-  </footer>
-
-  <script src="js/scripts.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+        // Subscription form handler
+        document.getElementById('subscriptionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const plan = document.getElementById('planSelect').value;
+            const planName = plan.charAt(0).toUpperCase() + plan.slice(1);
+            alert('Thank you for subscribing to our ' + planName + ' plan! You will receive a confirmation email shortly.');
+            this.reset();
+        });
+    </script>
 </body>
 </html>

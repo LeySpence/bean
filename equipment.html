@@ -1,264 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Professional brewing equipment for home baristas and coffee enthusiasts at Bean Boutique.">
-  <title>Brewing Equipment | Bean Boutique</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/phosphor-icons/1.4.2/css/phosphor.min.css">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional brewing equipment for home baristas and coffee enthusiasts at Bean Boutique.">
+    <title>Brewing Equipment | Bean Boutique</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <header class="nav-island">
-    <div class="nav-shell" id="navShell">
-      <a href="index.html" class="logo"><i class="ph ph-coffee"></i> Bean Boutique</a>
-      <button class="hamburger" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </header>
-
-  <div class="nav-overlay" id="navOverlay">
-    <ul class="nav-list">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="coffee.html">Coffee Selection</a></li>
-      <li><a href="equipment.html" class="active">Brewing Equipment</a></li>
-      <li><a href="events.html">Events</a></li>
-      <li><a href="offers.html">Offers &amp; Subscription</a></li>
-      <li><a href="cart.html">Cart <span class="cart-count" style="display:none; font-size:0.5em; vertical-align:super;">0</span></a></li>
-    </ul>
-  </div>
-
-  <main>
-    <section class="hero" style="min-height:60dvh;" aria-label="Brewing equipment banner">
-      <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1520981825232-ece5fae45120?w=1920&q=80');"></div>
-      <div class="hero-overlay"></div>
-      <div class="hero-content reveal visible">
-        <span class="eyebrow">Pro-Grade Tools</span>
-        <h1>Brewing Equipment</h1>
-        <p>Professional-grade tools to elevate your home brewing experience. From espresso machines to pour-over kits.</p>
-      </div>
-    </section>
-
-    <section class="bg-white">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="eyebrow">Shop Equipment</span>
-          <h2 class="section-title">Our Equipment Range</h2>
-          <p class="section-subtitle">Everything you need for the perfect cup at home</p>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="Bean Boutique Home">
+                <i class="fas fa-mug-hot"></i>
+                Bean Boutique
+            </a>
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="coffee.html">Coffee Selection</a></li>
+                    <li><a href="equipment.html" class="active">Brewing Equipment</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="offers.html">Offers & Subscription</a></li>
+                    <li>
+                        <a href="cart.html" class="cart-icon" aria-label="Shopping Cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count" style="display: none;">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <div class="products-grid">
-          <article class="shell product-card reveal reveal-delay-1">
-            <div class="core">
-              <img src="https://images.unsplash.com/photo-1520981825232-ece5fae45120?w=400&q=80" alt="Breville Barista Pro Espresso Machine" class="core-img">
-              <div class="core-body">
-                <h3 class="core-title">Breville Barista Pro</h3>
-                <p class="core-text">Semi-automatic espresso machine with integrated conical burr grinder and digital temperature control.</p>
-                <p style="color:var(--mocha); font-size:0.85rem; margin-bottom:0.5rem;"><strong>Tip:</strong> Preheat your portafilter for optimal extraction.</p>
-                <p class="core-price">MWK 1,100,000</p>
-                <button class="btn-add" data-id="eq-esp-pro" onclick="addToCart('eq-esp-pro', 'Breville Barista Pro', 1100000, 'https://images.unsplash.com/photo-1520981825232-ece5fae45120?w=400&q=80')">Add to Cart <i class="ph ph-shopping-cart"></i></button>
-              </div>
+    <main>
+        <!-- Page Header -->
+        <section class="hero" style="height: 50vh; min-height: 300px;" aria-label="Brewing equipment banner">
+            <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1520981825232-ece5fae45120?w=1920&q=80');"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Brewing Equipment</h1>
+                <p>Professional-grade tools to elevate your home brewing experience. From espresso machines to pour-over kits.</p>
             </div>
-          </article>
+        </section>
 
-          <article class="shell product-card reveal reveal-delay-2">
-            <div class="core">
-              <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400&q=80" alt="Bodum French Press" class="core-img">
-              <div class="core-body">
-                <h3 class="core-title">Bodum Chambord French Press</h3>
-                <p class="core-text">Classic 8-cup French press with heat-resistant borosilicate glass and chrome-plated steel frame.</p>
-                <p style="color:var(--mocha); font-size:0.85rem; margin-bottom:0.5rem;"><strong>Tip:</strong> Use coarse grind and steep for 4 minutes.</p>
-                <p class="core-price">MWK 70,000</p>
-                <button class="btn-add" data-id="eq-fp" onclick="addToCart('eq-fp', 'Bodum Chambord French Press', 70000, 'https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400&q=80')">Add to Cart <i class="ph ph-shopping-cart"></i></button>
-              </div>
-            </div>
-          </article>
+        <!-- Equipment Grid -->
+        <section class="bg-white">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Our Equipment Range</h2>
+                <p class="section-subtitle" data-aos="fade-up">Everything you need for the perfect cup at home</p>
+                
+                <div class="products-grid">
+                    <article class="card product-card" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1520981825232-ece5fae45120?w=400&q=80" alt="Breville Barista Pro Espresso Machine" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Breville Barista Pro</h3>
+                            <p class="card-text">Semi-automatic espresso machine with integrated conical burr grinder and digital temperature control.</p>
+                            <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Tip:</strong> Preheat your portafilter for optimal extraction.</p>
+                            <p class="card-price">MWK 1,100,000</p>
+                            <button class="btn-add" data-id="eq-esp-pro" onclick="addToCart('eq-esp-pro', 'Breville Barista Pro', 1100000, 'https://images.unsplash.com/photo-1520981825232-ece5fae45120?w=400&q=80')">Add to Cart</button>
+                        </div>
+                    </article>
 
-          <article class="shell product-card reveal reveal-delay-3">
-            <div class="core">
-              <img src="https://images.unsplash.com/photo-1517080319669-955c2a4e43b7?w=400&q=80" alt="Baratza Encore Coffee Grinder" class="core-img">
-              <div class="core-body">
-                <h3 class="core-title">Baratza Encore Grinder</h3>
-                <p class="core-text">Award-winning conical burr grinder with 40 grind settings, perfect for espresso to French press.</p>
-                <p style="color:var(--mocha); font-size:0.85rem; margin-bottom:0.5rem;"><strong>Tip:</strong> Clean burrs monthly for consistent results.</p>
-                <p class="core-price">MWK 280,000</p>
-                <button class="btn-add" data-id="eq-grind" onclick="addToCart('eq-grind', 'Baratza Encore Grinder', 280000, 'https://images.unsplash.com/photo-1517080319669-955c2a4e43b7?w=400&q=80')">Add to Cart <i class="ph ph-shopping-cart"></i></button>
-              </div>
-            </div>
-          </article>
+                    <article class="card product-card" data-aos="fade-up" data-aos-delay="50">
+                        <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400&q=80" alt="Bodum French Press" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Bodum Chambord French Press</h3>
+                            <p class="card-text">Classic 8-cup French press with heat-resistant borosilicate glass and chrome-plated steel frame.</p>
+                            <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Tip:</strong> Use coarse grind and steep for 4 minutes.</p>
+                            <p class="card-price">MWK 70,000</p>
+                            <button class="btn-add" data-id="eq-fp" onclick="addToCart('eq-fp', 'Bodum Chambord French Press', 70000, 'https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400&q=80')">Add to Cart</button>
+                        </div>
+                    </article>
 
-          <article class="shell product-card reveal reveal-delay-4">
-            <div class="core">
-              <img src="https://images.unsplash.com/photo-1572119865084-43c285814d63?w=400&q=80" alt="Hario Gooseneck Kettle" class="core-img">
-              <div class="core-body">
-                <h3 class="core-title">Hario Gooseneck Kettle</h3>
-                <p class="core-text">Stainless steel pour-over kettle with precision gooseneck spout for controlled water flow. 1.2L capacity.</p>
-                <p style="color:var(--mocha); font-size:0.85rem; margin-bottom:0.5rem;"><strong>Tip:</strong> Heat water to 92-96°C for optimal extraction.</p>
-                <p class="core-price">MWK 90,000</p>
-                <button class="btn-add" data-id="eq-kettle" onclick="addToCart('eq-kettle', 'Hario Gooseneck Kettle', 90000, 'https://images.unsplash.com/photo-1572119865084-43c285814d63?w=400&q=80')">Add to Cart <i class="ph ph-shopping-cart"></i></button>
-              </div>
-            </div>
-          </article>
+                    <article class="card product-card" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://images.unsplash.com/photo-1517080319669-955c2a4e43b7?w=400&q=80" alt="Baratza Encore Coffee Grinder" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Baratza Encore Grinder</h3>
+                            <p class="card-text">Award-winning conical burr grinder with 40 grind settings, perfect for espresso to French press.</p>
+                            <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Tip:</strong> Clean burrs monthly for consistent results.</p>
+                            <p class="card-price">MWK 280,000</p>
+                            <button class="btn-add" data-id="eq-grind" onclick="addToCart('eq-grind', 'Baratza Encore Grinder', 280000, 'https://images.unsplash.com/photo-1517080319669-955c2a4e43b7?w=400&q=80')">Add to Cart</button>
+                        </div>
+                    </article>
 
-          <article class="shell product-card reveal reveal-delay-1">
-            <div class="core">
-              <img src="https://images.unsplash.com/photo-1517260739337-6799d239ce83?w=400&q=80" alt="Hario V60 Ceramic Dripper" class="core-img">
-              <div class="core-body">
-                <h3 class="core-title">Hario V60 Ceramic Dripper</h3>
-                <p class="core-text">Iconic pour-over dripper with spiral ribs for optimal coffee expansion and extraction. Size 02.</p>
-                <p style="color:var(--mocha); font-size:0.85rem; margin-bottom:0.5rem;"><strong>Tip:</strong> Rinse filter paper before brewing to remove paper taste.</p>
-                <p class="core-price">MWK 44,000</p>
-                <button class="btn-add" data-id="eq-v60" onclick="addToCart('eq-v60', 'Hario V60 Ceramic Dripper', 44000, 'https://images.unsplash.com/photo-1517260739337-6799d239ce83?w=400&q=80')">Add to Cart <i class="ph ph-shopping-cart"></i></button>
-              </div>
-            </div>
-          </article>
+                    <article class="card product-card" data-aos="fade-up" data-aos-delay="150">
+                        <img src="https://images.unsplash.com/photo-1572119865084-43c285814d63?w=400&q=80" alt="Hario Gooseneck Kettle" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Hario Gooseneck Kettle</h3>
+                            <p class="card-text">Stainless steel pour-over kettle with precision gooseneck spout for controlled water flow. 1.2L capacity.</p>
+                            <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Tip:</strong> Heat water to 92-96°C for optimal extraction.</p>
+                            <p class="card-price">MWK 90,000</p>
+                            <button class="btn-add" data-id="eq-kettle" onclick="addToCart('eq-kettle', 'Hario Gooseneck Kettle', 90000, 'https://images.unsplash.com/photo-1572119865084-43c285814d63?w=400&q=80')">Add to Cart</button>
+                        </div>
+                    </article>
 
-          <article class="shell product-card reveal reveal-delay-2">
-            <div class="core">
-              <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=400&q=80" alt="AeroPress Coffee Maker" class="core-img">
-              <div class="core-body">
-                <h3 class="core-title">AeroPress Coffee Maker</h3>
-                <p class="core-text">Versatile immersion brewer producing smooth, rich coffee without bitterness. Includes 350 micro-filters.</p>
-                <p style="color:var(--mocha); font-size:0.85rem; margin-bottom:0.5rem;"><strong>Tip:</strong> Invert method for stronger, fuller-bodied coffee.</p>
-                <p class="core-price">MWK 60,000</p>
-                <button class="btn-add" data-id="eq-aero" onclick="addToCart('eq-aero', 'AeroPress Coffee Maker', 60000, 'https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=400&q=80')">Add to Cart <i class="ph ph-shopping-cart"></i></button>
-              </div>
-            </div>
-          </article>
+                    <article class="card product-card" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1517260739337-6799d239ce83?w=400&q=80" alt="Hario V60 Ceramic Dripper" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Hario V60 Ceramic Dripper</h3>
+                            <p class="card-text">Iconic pour-over dripper with spiral ribs for optimal coffee expansion and extraction. Size 02.</p>
+                            <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Tip:</strong> Rinse filter paper before brewing to remove paper taste.</p>
+                            <p class="card-price">MWK 44,000</p>
+                            <button class="btn-add" data-id="eq-v60" onclick="addToCart('eq-v60', 'Hario V60 Ceramic Dripper', 44000, 'https://images.unsplash.com/photo-1517260739337-6799d239ce83?w=400&q=80')">Add to Cart</button>
+                        </div>
+                    </article>
 
-          <article class="shell product-card reveal reveal-delay-3">
-            <div class="core">
-              <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&q=80" alt="Chemex Classic Coffee Maker" class="core-img">
-              <div class="core-body">
-                <h3 class="core-title">Chemex Classic 6-Cup</h3>
-                <p class="core-text">Elegant hourglass brewer with polished wood collar. Produces exceptionally clean, bright coffee.</p>
-                <p style="color:var(--mocha); font-size:0.85rem; margin-bottom:0.5rem;"><strong>Tip:</strong> Use Chemex-bonded filters for best results.</p>
-                <p class="core-price">MWK 85,000</p>
-                <button class="btn-add" data-id="eq-chemex" onclick="addToCart('eq-chemex', 'Chemex Classic 6-Cup', 85000, 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&q=80')">Add to Cart <i class="ph ph-shopping-cart"></i></button>
-              </div>
-            </div>
-          </article>
+                    <article class="card product-card" data-aos="fade-up" data-aos-delay="50">
+                        <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=400&q=80" alt="AeroPress Coffee Maker" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">AeroPress Coffee Maker</h3>
+                            <p class="card-text">Versatile immersion brewer producing smooth, rich coffee without bitterness. Includes 350 micro-filters.</p>
+                            <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Tip:</strong> Invert method for stronger, fuller-bodied coffee.</p>
+                            <p class="card-price">MWK 60,000</p>
+                            <button class="btn-add" data-id="eq-aero" onclick="addToCart('eq-aero', 'AeroPress Coffee Maker', 60000, 'https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=400&q=80')">Add to Cart</button>
+                        </div>
+                    </article>
 
-          <article class="shell product-card reveal reveal-delay-4">
-            <div class="core">
-              <img src="https://images.unsplash.com/photo-1442512595367-42736f9e51f9?w=400&q=80" alt="Fellow Stagg EKG Electric Kettle" class="core-img">
-              <div class="core-body">
-                <h3 class="core-title">Fellow Stagg EKG Kettle</h3>
-                <p class="core-text">Variable temperature electric pour-over kettle with LCD display and built-in brew stopwatch.</p>
-                <p style="color:var(--mocha); font-size:0.85rem; margin-bottom:0.5rem;"><strong>Tip:</strong> Set to 93°C for most pour-over methods.</p>
-                <p class="core-price">MWK 300,000</p>
-                <button class="btn-add" data-id="eq-ekg" onclick="addToCart('eq-ekg', 'Fellow Stagg EKG Kettle', 300000, 'https://images.unsplash.com/photo-1442512595367-42736f9e51f9?w=400&q=80')">Add to Cart <i class="ph ph-shopping-cart"></i></button>
-              </div>
-            </div>
-          </article>
+                    <article class="card product-card" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&q=80" alt="Chemex Classic Coffee Maker" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Chemex Classic 6-Cup</h3>
+                            <p class="card-text">Elegant hourglass brewer with polished wood collar. Produces exceptionally clean, bright coffee.</p>
+                            <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Tip:</strong> Use Chemex-bonded filters for best results.</p>
+                            <p class="card-price">MWK 85,000</p>
+                            <button class="btn-add" data-id="eq-chemex" onclick="addToCart('eq-chemex', 'Chemex Classic 6-Cup', 85000, 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&q=80')">Add to Cart</button>
+                        </div>
+                    </article>
 
-          <article class="shell product-card reveal reveal-delay-1">
-            <div class="core">
-              <img src="https://images.unsplash.com/photo-1511537632536-b74c2769373f?w=400&q=80" alt="Motta Milk Frothing Pitcher" class="core-img">
-              <div class="core-body">
-                <h3 class="core-title">Motta Milk Frothing Pitcher</h3>
-                <p class="core-text">Professional 500ml stainless steel milk jug with precise spout for latte art. Dishwasher safe.</p>
-                <p style="color:var(--mocha); font-size:0.85rem; margin-bottom:0.5rem;"><strong>Tip:</strong> Chill milk to 4°C before steaming for best microfoam.</p>
-                <p class="core-price">MWK 38,000</p>
-                <button class="btn-add" data-id="eq-pitcher" onclick="addToCart('eq-pitcher', 'Motta Milk Frothing Pitcher', 38000, 'https://images.unsplash.com/photo-1511537632536-b74c2769373f?w=400&q=80')">Add to Cart <i class="ph ph-shopping-cart"></i></button>
-              </div>
-            </div>
-          </article>
+                    <article class="card product-card" data-aos="fade-up" data-aos-delay="150">
+                        <img src="https://images.unsplash.com/photo-1442512595367-42736f9e51f9?w=400&q=80" alt="Fellow Stagg EKG Electric Kettle" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Fellow Stagg EKG Kettle</h3>
+                            <p class="card-text">Variable temperature electric pour-over kettle with LCD display and built-in brew stopwatch.</p>
+                            <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Tip:</strong> Set to 93°C for most pour-over methods.</p>
+                            <p class="card-price">MWK 300,000</p>
+                            <button class="btn-add" data-id="eq-ekg" onclick="addToCart('eq-ekg', 'Fellow Stagg EKG Kettle', 300000, 'https://images.unsplash.com/photo-1442512595367-42736f9e51f9?w=400&q=80')">Add to Cart</button>
+                        </div>
+                    </article>
 
-          <article class="shell product-card reveal reveal-delay-2">
-            <div class="core">
-              <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&q=80" alt="Acaia Pearl Coffee Scale" class="core-img">
-              <div class="core-body">
-                <h3 class="core-title">Acaia Pearl Scale</h3>
-                <p class="core-text">Precision coffee scale with 0.1g accuracy, built-in timer, and Bluetooth connectivity to brewing app.</p>
-                <p style="color:var(--mocha); font-size:0.85rem; margin-bottom:0.5rem;"><strong>Tip:</strong> Use 1:16 coffee-to-water ratio for pour-over.</p>
-                <p class="core-price">MWK 260,000</p>
-                <button class="btn-add" data-id="eq-scale" onclick="addToCart('eq-scale', 'Acaia Pearl Scale', 260000, 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&q=80')">Add to Cart <i class="ph ph-shopping-cart"></i></button>
-              </div>
-            </div>
-          </article>
+                    <article class="card product-card" data-aos="fade-up">
+                        <img src="https://images.unsplash.com/photo-1511537632536-b74c2769373f?w=400&q=80" alt="Motta Milk Frothing Pitcher" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Motta Milk Frothing Pitcher</h3>
+                            <p class="card-text">Professional 500ml stainless steel milk jug with precise spout for latte art. Dishwasher safe.</p>
+                            <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Tip:</strong> Chill milk to 4°C before steaming for best microfoam.</p>
+                            <p class="card-price">MWK 38,000</p>
+                            <button class="btn-add" data-id="eq-pitcher" onclick="addToCart('eq-pitcher', 'Motta Milk Frothing Pitcher', 38000, 'https://images.unsplash.com/photo-1511537632536-b74c2769373f?w=400&q=80')">Add to Cart</button>
+                        </div>
+                    </article>
 
-          <article class="shell product-card reveal reveal-delay-3">
-            <div class="core">
-              <img src="https://images.unsplash.com/photo-1504630083234-14187a9df0f5?w=400&q=80" alt="Rhino Coffee Tamper" class="core-img">
-              <div class="core-body">
-                <h3 class="core-title">Rhino Pro Tamper 58mm</h3>
-                <p class="core-text">Ergonomic stainless steel tamper with calibrated spring for consistent 15kg tamping pressure.</p>
-                <p style="color:var(--mocha); font-size:0.85rem; margin-bottom:0.5rem;"><strong>Tip:</strong> Tamp level and polish the puck surface before locking in.</p>
-                <p class="core-price">MWK 80,000</p>
-                <button class="btn-add" data-id="eq-tamper" onclick="addToCart('eq-tamper', 'Rhino Pro Tamper 58mm', 80000, 'https://images.unsplash.com/photo-1504630083234-14187a9df0f5?w=400&q=80')">Add to Cart <i class="ph ph-shopping-cart"></i></button>
-              </div>
-            </div>
-          </article>
+                    <article class="card product-card" data-aos="fade-up" data-aos-delay="50">
+                        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&q=80" alt="Acaia Pearl Coffee Scale" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Acaia Pearl Scale</h3>
+                            <p class="card-text">Precision coffee scale with 0.1g accuracy, built-in timer, and Bluetooth connectivity to brewing app.</p>
+                            <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Tip:</strong> Use 1:16 coffee-to-water ratio for pour-over.</p>
+                            <p class="card-price">MWK 260,000</p>
+                            <button class="btn-add" data-id="eq-scale" onclick="addToCart('eq-scale', 'Acaia Pearl Scale', 260000, 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&q=80')">Add to Cart</button>
+                        </div>
+                    </article>
 
-          <article class="shell product-card reveal reveal-delay-4">
-            <div class="core">
-              <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&q=80" alt="Kalita Wave Dripper" class="core-img">
-              <div class="core-body">
-                <h3 class="core-title">Kalita Wave 185 Dripper</h3>
-                <p class="core-text">Flat-bottom dripper with three extraction holes for consistent, balanced pour-over coffee.</p>
-                <p style="color:var(--mocha); font-size:0.85rem; margin-bottom:0.5rem;"><strong>Tip:</strong> Pulse pour in 50g increments for even saturation.</p>
-                <p class="core-price">MWK 56,000</p>
-                <button class="btn-add" data-id="eq-kalita" onclick="addToCart('eq-kalita', 'Kalita Wave 185 Dripper', 56000, 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&q=80')">Add to Cart <i class="ph ph-shopping-cart"></i></button>
-              </div>
+                    <article class="card product-card" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://images.unsplash.com/photo-1504630083234-14187a9df0f5?w=400&q=80" alt="Rhino Coffee Tamper" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Rhino Pro Tamper 58mm</h3>
+                            <p class="card-text">Ergonomic stainless steel tamper with calibrated spring for consistent 15kg tamping pressure.</p>
+                            <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Tip:</strong> Tamp level and polish the puck surface before locking in.</p>
+                            <p class="card-price">MWK 80,000</p>
+                            <button class="btn-add" data-id="eq-tamper" onclick="addToCart('eq-tamper', 'Rhino Pro Tamper 58mm', 80000, 'https://images.unsplash.com/photo-1504630083234-14187a9df0f5?w=400&q=80')">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <article class="card product-card" data-aos="fade-up" data-aos-delay="150">
+                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&q=80" alt="Kalita Wave Dripper" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Kalita Wave 185 Dripper</h3>
+                            <p class="card-text">Flat-bottom dripper with three extraction holes for consistent, balanced pour-over coffee.</p>
+                            <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Tip:</strong> Pulse pour in 50g increments for even saturation.</p>
+                            <p class="card-price">MWK 56,000</p>
+                            <button class="btn-add" data-id="eq-kalita" onclick="addToCart('eq-kalita', 'Kalita Wave 185 Dripper', 56000, 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&q=80')">Add to Cart</button>
+                        </div>
+                    </article>
+                </div>
             </div>
-          </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3><i class="fas fa-mug-hot"></i> Bean Boutique</h3>
+                <p>Crafting exceptional coffee experiences since 2018. We source ethically, roast carefully, and brew with passion.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="coffee.html">Coffee Selection</a></p>
+                <p><a href="equipment.html">Brewing Equipment</a></p>
+                <p><a href="events.html">Events & Workshops</a></p>
+                <p><a href="offers.html">Special Offers</a></p>
+                <p><a href="cart.html">Shopping Cart</a></p>
+            </div>
+            <div class="footer-col">
+                <h3>Opening Hours</h3>
+                <p>Monday - Friday: 7:00 AM - 7:00 PM</p>
+                <p>Saturday: 8:00 AM - 8:00 PM</p>
+                <p>Sunday: 9:00 AM - 5:00 PM</p>
+                <p>Bank Holidays: 9:00 AM - 4:00 PM</p>
+            </div>
+            <div class="footer-col">
+                <h3>Visit Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Area 43, Lilongwe</p>
+                <p><i class="fas fa-city"></i> Lilongwe, Malawi</p>
+                <p><i class="fas fa-phone"></i> +265 1 234 567</p>
+                <p><i class="fas fa-envelope"></i> hello@beanboutique.com</p>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30834.123456!2d33.7741!3d-13.9626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1921a6c5b8c5e6b7%3A0x123456789abcdef!2sLilongwe!5e0!3m2!1sen!2smw!4v1700000000" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Bean Boutique location on Google Maps">
+                    </iframe>
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h3><i class="ph ph-coffee"></i> Bean Boutique</h3>
-        <p>Crafting exceptional coffee experiences since 2018. We source ethically, roast carefully, and brew with passion.</p>
-        <div class="footer-social">
-          <a href="#" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
-          <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
-          <a href="#" aria-label="Twitter"><i class="ph ph-twitter-logo"></i></a>
-          <a href="#" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bean Boutique Coffee Shop. All rights reserved. | <a href="#" style="color: rgba(255,255,255,0.6);">Privacy Policy</a></p>
         </div>
-      </div>
-      <div class="footer-col">
-        <h3>Quick Links</h3>
-        <p><a href="index.html">Home</a></p>
-        <p><a href="coffee.html">Coffee Selection</a></p>
-        <p><a href="equipment.html">Brewing Equipment</a></p>
-        <p><a href="events.html">Events &amp; Workshops</a></p>
-        <p><a href="offers.html">Special Offers</a></p>
-        <p><a href="cart.html">Shopping Cart</a></p>
-      </div>
-      <div class="footer-col">
-        <h3>Opening Hours</h3>
-        <p>Monday - Friday: 7:00 AM - 7:00 PM</p>
-        <p>Saturday: 8:00 AM - 8:00 PM</p>
-        <p>Sunday: 9:00 AM - 5:00 PM</p>
-        <p>Bank Holidays: 9:00 AM - 4:00 PM</p>
-      </div>
-      <div class="footer-col">
-        <h3>Visit Us</h3>
-        <p><i class="ph ph-map-pin"></i> Area 43, Lilongwe</p>
-        <p><i class="ph ph-buildings"></i> Lilongwe, Malawi</p>
-        <p><i class="ph ph-phone"></i> +265 1 234 567</p>
-        <p><i class="ph ph-envelope"></i> hello@beanboutique.com</p>
-        <div class="map-container">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30834.123456!2d33.7741!3d-13.9626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1921a6c5b8c5e6b7%3A0x123456789abcdef!2sLilongwe!5e0!3m2!1sen!2smw!4v1700000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Bean Boutique location on Google Maps"></iframe>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Bean Boutique Coffee Shop. All rights reserved. | <a href="#" style="color:rgba(255,255,255,0.4);">Privacy Policy</a></p>
-    </div>
-  </footer>
+    </footer>
 
-  <script src="js/scripts.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
