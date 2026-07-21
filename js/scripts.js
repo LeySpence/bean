@@ -149,7 +149,7 @@ function renderCart() {
                 </td>
             </tr>
         `;
-        if (cartTotal) cartTotal.textContent = 'Total: £0.00';
+        if (cartTotal) cartTotal.textContent = 'Total: MWK 0.00';
         return;
     }
 
@@ -163,7 +163,7 @@ function renderCart() {
                     <img src="${item.image}" alt="${item.name}" class="cart-item-img">
                 </td>
                 <td><strong>${item.name}</strong></td>
-                <td>£${item.price.toFixed(2)}</td>
+                <td>MWK ${item.price.toFixed(2)}</td>
                 <td>
                     <div class="qty-control">
                         <button class="qty-btn" onclick="updateQuantity('${item.id}', -1)">-</button>
@@ -172,7 +172,7 @@ function renderCart() {
                     </div>
                 </td>
                 <td>
-                    <strong>£${itemTotal.toFixed(2)}</strong>
+                    <strong>MWK ${itemTotal.toFixed(2)}</strong>
                     <button class="qty-btn" onclick="removeFromCart('${item.id}')" style="margin-left: 1rem; color: #dc3545;" aria-label="Remove item">
                         <i class="fas fa-trash"></i>
                     </button>
@@ -181,7 +181,7 @@ function renderCart() {
         `;
     }).join('');
 
-    if (cartTotal) cartTotal.textContent = `Total: £${total.toFixed(2)}`;
+    if (cartTotal) cartTotal.textContent = `Total: MWK ${total.toFixed(2)}`;
 }
 
 // ---------- SEARCH FUNCTIONALITY ----------
