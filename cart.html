@@ -3,146 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#111111">
-    <meta name="description" content="Your shopping cart at Bean Boutique. Review your items and proceed to checkout.">
-    <title>Shopping Cart — Bean Boutique</title>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Your Bean Boutique shopping cart. Review and checkout your coffee and equipment selections.">
+    <title>Shopping Cart | Bean Boutique</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Switzer:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
 </head>
-<body id="page-cart">
-    <a href="#main" class="skip-link">Skip to main content</a>
+<body>
 
-    <header id="header" class="header">
-        <div class="container header__inner">
-            <a href="index.html" class="logo">
-                <img src="images/icons/logo.svg" alt="Bean Boutique Coffee Shop" width="36" height="36" loading="eager">
-                <span>Bean Boutique</span>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="Bean Boutique Home">
+                <i class="fas fa-mug-hot"></i>
+                Bean Boutique
             </a>
-            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" type="button">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
-            <nav id="nav" aria-label="Main navigation">
-                <ul class="nav-links">
-                    <li><a href="index.html" class="nav-links__link">Home</a></li>
-                    <li><a href="coffee.html" class="nav-links__link">Coffee</a></li>
-                    <li><a href="equipment.html" class="nav-links__link">Equipment</a></li>
-                    <li><a href="events.html" class="nav-links__link">Events</a></li>
-                    <li><a href="offers.html" class="nav-links__link">Offers</a></li>
-                    <li><a href="cart.html" class="nav-links__link nav-links__link--cart nav-links__link--active" aria-current="page">Cart <span id="cartCount" class="cart-count">0</span></a></li>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="coffee.html">Coffee Selection</a></li>
+                    <li><a href="equipment.html">Brewing Equipment</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="offers.html">Offers & Subscription</a></li>
+                    <li>
+                        <a href="cart.html" class="cart-icon" aria-label="Shopping Cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count" style="display: none;">0</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main id="main">
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-            <div class="container">
-                <ol class="breadcrumb__list">
-                    <li class="breadcrumb__item"><a href="index.html" class="breadcrumb__link">Home</a></li>
-                    <li class="breadcrumb__item breadcrumb__item--current" aria-current="page">Cart</li>
-                </ol>
-            </div>
-        </nav>
-
-        <section id="page-header" class="page-header">
-            <div class="container">
-                <h1 class="page-header__title">Your Shopping Cart</h1>
+    <main>
+        <!-- Page Header -->
+        <section class="hero" style="height: 40vh; min-height: 250px;" aria-label="Shopping cart banner">
+            <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=1920&q=80');"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Your Shopping Cart</h1>
+                <p>Review your selections and proceed to checkout when ready.</p>
             </div>
         </section>
 
-        <section id="cart-items" class="section" aria-label="Shopping cart items">
+        <!-- Cart Content -->
+        <section class="bg-white">
             <div class="container">
-                <div id="cart-empty" class="cart-empty" hidden>
-                    <p class="cart-empty__text">Your cart is empty.</p>
-                    <a href="coffee.html" class="btn btn--primary">Start Shopping</a>
-                </div>
-                <div id="cart-list" class="cart-list">
-                    <div class="cart-list__header">
-                        <span>Product</span>
-                        <span>Price</span>
-                        <span>Quantity</span>
-                        <span>Subtotal</span>
-                        <span>Remove</span>
-                    </div>
-                    <div id="cartItems" class="cart-list__body">
+                <h2 class="section-title" data-aos="fade-up">Cart Items</h2>
+                
+                <div data-aos="fade-up">
+                    <table class="cart-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Product</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cartItems">
+                            <tr>
+                                <td colspan="5" class="cart-empty">
+                                    <i class="fas fa-shopping-cart" style="font-size: 3rem; margin-bottom: 1rem; display: block; color: var(--accent);"></i>
+                                    <p>Your cart is empty.</p>
+                                    <a href="coffee.html" class="btn btn-primary mt-2">Browse Coffee</a>
+                                    <a href="equipment.html" class="btn btn-outline mt-2">Browse Equipment</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="cart-total-row" id="cartTotal">Total: £0.00</div>
+                    
+                    <div style="text-align: right; margin-top: 1.5rem;">
+                        <a href="coffee.html" class="btn btn-outline">Continue Shopping</a>
+                        <button id="checkoutBtn" class="btn btn-primary" style="margin-left: 1rem;">Proceed to Checkout</button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <aside id="cart-summary" class="section section--alt" aria-label="Cart summary">
+        <!-- Trust Badges -->
+        <section>
             <div class="container">
-                <div class="cart-summary">
-                    <h2 class="cart-summary__title">Order Summary</h2>
-                    <div class="cart-summary__rows">
-                        <div class="cart-summary__row">
-                            <span>Subtotal</span>
-                            <span id="cartSubtotal">&pound;0.00</span>
-                        </div>
-                        <div class="cart-summary__row">
-                            <span>Shipping</span>
-                            <span id="cartShipping">Free</span>
-                        </div>
-                        <div class="cart-summary__row cart-summary__row--total">
-                            <span><strong>Total</strong></span>
-                            <span id="cartTotal"><strong>&pound;0.00</strong></span>
-                        </div>
+                <div class="card-grid" style="max-width: 800px; margin: 0 auto;">
+                    <div class="testimonial-card" data-aos="fade-up">
+                        <i class="fas fa-lock" style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                        <h3>Secure Checkout</h3>
+                        <p class="card-text">Your payment information is encrypted and protected.</p>
                     </div>
-                    <div class="cart-summary__actions">
-                        <button id="checkoutBtn" class="btn btn--primary btn--full" type="button" disabled>Proceed to Checkout</button>
-                        <a href="coffee.html" class="btn btn--secondary btn--full">Continue Shopping</a>
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-truck" style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                        <h3>Free Shipping</h3>
+                        <p class="card-text">Free delivery on all orders over £30 within the UK.</p>
+                    </div>
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-undo" style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                        <h3>Easy Returns</h3>
+                        <p class="card-text">30-day hassle-free returns on all unopened products.</p>
                     </div>
                 </div>
             </div>
-        </aside>
+        </section>
     </main>
 
-    <footer id="footer" class="footer">
-        <div class="container footer__inner">
-            <div class="footer__section">
-                <h3 class="footer__heading">About Us</h3>
-                <p class="footer__text">Bean Boutique - Your neighbourhood coffee shop bringing artisanal coffee to your cup since 2020.</p>
-                <address class="footer__address">
-                    <p>123 Coffee Lane, Bean Town, BT1 2AB</p>
-                    <p>Phone: <a href="tel:+441234567890">(0123) 456-7890</a></p>
-                    <p>Email: <a href="mailto:hello@beanboutique.com">hello@beanboutique.com</a></p>
-                </address>
-                <nav aria-label="Footer navigation" class="footer__links">
-                    <a href="index.html">Home</a>
-                    <a href="coffee.html">Coffee</a>
-                    <a href="equipment.html">Equipment</a>
-                    <a href="events.html">Events</a>
-                    <a href="offers.html">Offers</a>
-                    <a href="cart.html">Cart</a>
-                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
-                    <a href="#" aria-label="Follow us on Facebook">Facebook</a>
-                    <a href="#" aria-label="Follow us on Twitter">Twitter</a>
-                </nav>
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3><i class="fas fa-mug-hot"></i> Bean Boutique</h3>
+                <p>Crafting exceptional coffee experiences since 2018. We source ethically, roast carefully, and brew with passion.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
             </div>
-            <div class="footer__section">
-                <h3 class="footer__heading">Newsletter</h3>
-                <form class="footer__newsletter" id="newsletterForm" action="#" method="post">
-                    <label for="footer-email" class="sr-only">Email address</label>
-                    <input type="email" id="footer-email" name="email" placeholder="Your email address" required aria-required="true">
-                    <button type="submit" class="btn btn--primary btn--sm">Subscribe</button>
-                </form>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="coffee.html">Coffee Selection</a></p>
+                <p><a href="equipment.html">Brewing Equipment</a></p>
+                <p><a href="events.html">Events & Workshops</a></p>
+                <p><a href="offers.html">Special Offers</a></p>
+                <p><a href="cart.html">Shopping Cart</a></p>
+            </div>
+            <div class="footer-col">
+                <h3>Opening Hours</h3>
+                <p>Monday - Friday: 7:00 AM - 7:00 PM</p>
+                <p>Saturday: 8:00 AM - 8:00 PM</p>
+                <p>Sunday: 9:00 AM - 5:00 PM</p>
+                <p>Bank Holidays: 9:00 AM - 4:00 PM</p>
+            </div>
+            <div class="footer-col">
+                <h3>Visit Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 42 Brew Street, Coffee Quarter</p>
+                <p><i class="fas fa-city"></i> London, EC1A 1BB</p>
+                <p><i class="fas fa-phone"></i> +44 (0)20 7946 0958</p>
+                <p><i class="fas fa-envelope"></i> hello@beanboutique.com</p>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.432383990807!2d-0.127758384229327!3d51.50735097963553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604c38c8cd1d9%3A0xb78f2474b9a45aa9!2sLondon!5e0!3m2!1sen!2suk!4v1699999999999!5m2!1sen!2suk" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Bean Boutique location on Google Maps">
+                    </iframe>
+                </div>
             </div>
         </div>
-        <div class="footer__bottom">
-            <div class="container">
-                <small>&copy; 2026 Bean Boutique Coffee Shop. All rights reserved.</small>
-            </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bean Boutique Coffee Shop. All rights reserved. | <a href="#" style="color: rgba(255,255,255,0.6);">Privacy Policy</a></p>
         </div>
     </footer>
 
-    <script src="js/main.js" defer></script>
-    <script src="js/cart.js" defer></script>
-    <script src="js/forms.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

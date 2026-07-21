@@ -3,299 +3,322 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#111111">
-    <meta name="description" content="Bean Boutique Coffee Shop - Artisanal coffee, brewing equipment, and immersive coffee experiences in your neighbourhood.">
-    <title>Bean Boutique Coffee Shop</title>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Bean Boutique - Premium artisan coffee shop offering unique blends, brewing equipment, and coffee events.">
+    <title>Bean Boutique | Artisan Coffee Shop</title>
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Switzer:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Plugin -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- AOS Animation Plugin -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- External CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
 </head>
-<body id="page-home">
-    <a href="#main" class="skip-link">Skip to main content</a>
+<body>
 
-    <header id="header" class="header">
-        <div class="container header__inner">
-            <a href="index.html" class="logo">
-                <img src="images/icons/logo.svg" alt="Bean Boutique Coffee Shop" width="36" height="36" loading="eager">
-                <span>Bean Boutique</span>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="Bean Boutique Home">
+                <i class="fas fa-mug-hot"></i>
+                Bean Boutique
             </a>
-            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" type="button">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
-            <nav id="nav" aria-label="Main navigation">
-                <ul class="nav-links">
-                    <li><a href="index.html" class="nav-links__link nav-links__link--active" aria-current="page">Home</a></li>
-                    <li><a href="coffee.html" class="nav-links__link">Coffee</a></li>
-                    <li><a href="equipment.html" class="nav-links__link">Equipment</a></li>
-                    <li><a href="events.html" class="nav-links__link">Events</a></li>
-                    <li><a href="offers.html" class="nav-links__link">Offers</a></li>
-                    <li><a href="cart.html" class="nav-links__link nav-links__link--cart">Cart <span id="cartCount" class="cart-count">0</span></a></li>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="coffee.html">Coffee Selection</a></li>
+                    <li><a href="equipment.html">Brewing Equipment</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="offers.html">Offers & Subscription</a></li>
+                    <li>
+                        <a href="cart.html" class="cart-icon" aria-label="Shopping Cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count" style="display: none;">0</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main id="main">
-        <section id="hero" class="hero" aria-label="Welcome banner">
-            <div class="hero__content">
-                <p class="hero__eyebrow">Bean Boutique</p>
-                <h1 class="hero__title">Crafting Perfect Moments, One Cup at a Time</h1>
-                <p class="hero__subtitle">Artisanal coffee, premium equipment, and immersive experiences in your neighbourhood.</p>
-                <div class="hero__cta">
-                    <a href="coffee.html" class="btn btn--primary">Explore Our Coffee</a>
-                    <a href="events.html" class="btn btn--secondary">Upcoming Events</a>
-                </div>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" aria-label="Welcome banner">
+            <div class="hero-bg"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Freshly Roasted Coffee</h1>
+                <p>Discover Premium Coffee Blends crafted with passion and precision. Experience the art of coffee in every cup.</p>
+                <a href="coffee.html" class="btn btn-primary">Shop Now</a>
+                <a href="events.html" class="btn btn-secondary">Explore Events</a>
             </div>
-            <div class="hero__media" aria-roledescription="carousel" aria-live="polite">
-                <div class="hero__slideshow">
-                    <div class="hero__slide hero__slide--active">
-                        <img src="images/hero/hero-coffee-1.jpg" alt="Freshly roasted coffee beans being poured into a burlap sack" width="960" height="800" loading="eager">
-                        <div class="hero__overlay">
-                            <h2 class="hero__title">Freshly Roasted</h2>
-                            <p class="hero__subtitle">Small-batch roasts, delivered fresh</p>
-                        </div>
-                    </div>
-                    <div class="hero__slide">
-                        <img src="images/hero/hero-coffee-2.jpg" alt="Barista crafting latte art in a ceramic cup" width="960" height="800" loading="lazy">
-                        <div class="hero__overlay">
-                            <h2 class="hero__title">Artisan Craft</h2>
-                            <p class="hero__subtitle">Hand-crafted drinks by skilled baristas</p>
-                        </div>
-                    </div>
-                    <div class="hero__slide">
-                        <img src="images/hero/hero-coffee-3.jpg" alt="Warm coffee shop interior with customers enjoying their drinks" width="960" height="800" loading="lazy">
-                        <div class="hero__overlay">
-                            <h2 class="hero__title">Your Local Spot</h2>
-                            <p class="hero__subtitle">A warm space for coffee lovers</p>
-                        </div>
+        </section>
+
+        <!-- Slideshow Section -->
+        <section class="container" data-aos="fade-up">
+            <h2 class="section-title">Experience the Journey</h2>
+            <div class="slideshow" role="region" aria-label="Featured images slideshow">
+                <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=1200&q=80');" aria-hidden="false">
+                    <div class="slide-content">
+                        <h3>Ethically Sourced Beans</h3>
+                        <p>From farm to cup, we ensure every bean tells a story of sustainability.</p>
                     </div>
                 </div>
-                <div class="hero__controls">
-                    <button class="hero__btn hero__btn--prev" aria-label="Previous slide" type="button"><i class="ph-bold ph-caret-left"></i></button>
-                    <div class="hero__dots" role="tablist" aria-label="Slideshow navigation">
-                        <button class="hero__dot hero__dot--active" role="tab" aria-selected="true" aria-label="Slide 1" type="button"></button>
-                        <button class="hero__dot" role="tab" aria-selected="false" aria-label="Slide 2" type="button"></button>
-                        <button class="hero__dot" role="tab" aria-selected="false" aria-label="Slide 3" type="button"></button>
+                <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1517080319669-955c2a4e43b7?w=1200&q=80');" aria-hidden="true">
+                    <div class="slide-content">
+                        <h3>Masterful Brewing</h3>
+                        <p>Professional equipment for the perfect extraction every time.</p>
                     </div>
-                    <button class="hero__btn hero__btn--next" aria-label="Next slide" type="button"><i class="ph-bold ph-caret-right"></i></button>
+                </div>
+                <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1200&q=80');" aria-hidden="true">
+                    <div class="slide-content">
+                        <h3>Community & Connection</h3>
+                        <p>Join our vibrant community of coffee enthusiasts and experts.</p>
+                    </div>
+                </div>
+                <div class="slide-dots">
+                    <button class="dot active" aria-label="Slide 1"></button>
+                    <button class="dot" aria-label="Slide 2"></button>
+                    <button class="dot" aria-label="Slide 3"></button>
                 </div>
             </div>
         </section>
 
-        <section id="welcome" class="section">
-            <div class="container welcome__grid">
-                <div class="welcome__text">
-                    <h2 class="section__title">Your Daily Brew, Reimagined</h2>
-                    <p>At Bean Boutique, we believe every cup tells a story. From the misty highlands of Ethiopia to the volcanic soils of Colombia, we source the finest beans and roast them with care in our neighbourhood roastery.</p>
-                    <p>Whether you are a seasoned coffee connoisseur or just beginning your journey, our team is here to guide you to your perfect cup.</p>
-                    <a href="coffee.html" class="btn btn--primary">Discover Our Coffees</a>
+        <!-- Featured Products -->
+        <section class="bg-white">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Featured Products</h2>
+                <p class="section-subtitle" data-aos="fade-up">Hand-picked favourites from our roastery</p>
+                <div class="products-grid">
+                    <article class="card product-card" data-aos="fade-up" data-aos-delay="0">
+                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefda?w=400&q=80" alt="Ethiopian Yirgacheffe coffee beans" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Ethiopian Yirgacheffe</h3>
+                            <p class="card-text">Bright, floral notes with a hint of citrus and bergamot.</p>
+                            <p class="card-price">£14.99</p>
+                            <button class="btn-add" data-id="eth-yirg" onclick="addToCart('eth-yirg', 'Ethiopian Yirgacheffe', 14.99, 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefda?w=400&q=80')">Add to Cart</button>
+                        </div>
+                    </article>
+                    <article class="card product-card" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400&q=80" alt="Colombian Supremo coffee beans" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Colombian Supremo</h3>
+                            <p class="card-text">Smooth, balanced body with caramel sweetness and nutty finish.</p>
+                            <p class="card-price">£12.99</p>
+                            <button class="btn-add" data-id="col-sup" onclick="addToCart('col-sup', 'Colombian Supremo', 12.99, 'https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400&q=80')">Add to Cart</button>
+                        </div>
+                    </article>
+                    <article class="card product-card" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?w=400&q=80" alt="Brazilian Santos coffee beans" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Brazilian Santos</h3>
+                            <p class="card-text">Low acidity with chocolate notes and a creamy mouthfeel.</p>
+                            <p class="card-price">£11.99</p>
+                            <button class="btn-add" data-id="bra-san" onclick="addToCart('bra-san', 'Brazilian Santos', 11.99, 'https://images.unsplash.com/photo-1512568400610-62da28bc8a13?w=400&q=80')">Add to Cart</button>
+                        </div>
+                    </article>
+                    <article class="card product-card" data-aos="fade-up" data-aos-delay="300">
+                        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&q=80" alt="Kenyan AA coffee beans" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Kenyan AA</h3>
+                            <p class="card-text">Bold, wine-like acidity with blackcurrant and tomato notes.</p>
+                            <p class="card-price">£15.99</p>
+                            <button class="btn-add" data-id="ken-aa" onclick="addToCart('ken-aa', 'Kenyan AA', 15.99, 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&q=80')">Add to Cart</button>
+                        </div>
+                    </article>
                 </div>
-                <div class="welcome__image">
-                    <figure>
-                        <img src="images/hero/hero-coffee-2.jpg" alt="Close-up of freshly ground coffee beans with a portafilter" width="600" height="400" loading="lazy">
+                <div class="text-center mt-2">
+                    <a href="coffee.html" class="btn btn-outline">View All Coffees</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Events -->
+        <section>
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Upcoming Events</h2>
+                <p class="section-subtitle" data-aos="fade-up">Join us for unforgettable coffee experiences</p>
+                <div class="card-grid">
+                    <article class="card" data-aos="fade-up" data-aos-delay="0">
+                        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=400&q=80" alt="Latte Art Workshop" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Latte Art Workshop</h3>
+                            <p class="card-text">Learn the fundamentals of pouring beautiful rosettas and tulips.</p>
+                            <p class="card-price">£35.00</p>
+                            <a href="events.html" class="btn btn-outline btn-small">Register Now</a>
+                        </div>
+                    </article>
+                    <article class="card" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://images.unsplash.com/photo-1504630083234-14187a9df0f5?w=400&q=80" alt="Coffee Cupping Session" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Cupping Session</h3>
+                            <p class="card-text">Taste and evaluate 6 unique single-origin coffees with our head roaster.</p>
+                            <p class="card-price">£25.00</p>
+                            <a href="events.html" class="btn btn-outline btn-small">Register Now</a>
+                        </div>
+                    </article>
+                    <article class="card" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://images.unsplash.com/photo-1442512595367-42736f9e51f9?w=400&q=80" alt="Home Brewing Masterclass" class="card-img">
+                        <div class="card-body">
+                            <h3 class="card-title">Home Brewing Masterclass</h3>
+                            <p class="card-text">Master V60, AeroPress, and French Press techniques at home.</p>
+                            <p class="card-price">£30.00</p>
+                            <a href="events.html" class="btn btn-outline btn-small">Register Now</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section class="bg-white">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Our Space</h2>
+                <div class="gallery-grid" data-aos="fade-up">
+                    <figure class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=400&q=80" alt="Freshly roasted coffee beans in a wooden scoop">
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&q=80" alt="Interior of Bean Boutique coffee shop">
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&q=80" alt="Barista preparing pour over coffee">
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1511537632536-b74c2769373f?w=400&q=80" alt="Latte art on a ceramic cup">
                     </figure>
                 </div>
             </div>
         </section>
 
-        <section id="highlights" class="section">
+        <!-- Testimonials -->
+        <section>
             <div class="container">
-                <div class="highlights__grid">
-                    <article class="highlight-card reveal-child">
-                        <h3 class="highlight-card__title">Premium Coffee</h3>
-                        <p class="highlight-card__text">Explore our curated collection of single-origin and blended coffees from the world's finest growing regions.</p>
-                        <a href="coffee.html" class="btn btn--secondary">Browse Coffee</a>
+                <h2 class="section-title" data-aos="fade-up">What Our Customers Say</h2>
+                <div class="card-grid">
+                    <article class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+                        <div class="stars" aria-label="5 star rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"The Ethiopian Yirgacheffe is absolutely divine. You can taste the care that goes into every roast. My morning ritual has been transformed."</p>
+                        <p class="testimonial-author">- Sarah Mitchell</p>
                     </article>
-                    <article class="highlight-card reveal-child">
-                        <h3 class="highlight-card__title">Brewing Equipment</h3>
-                        <p class="highlight-card__text">From espresso machines to French presses, find everything you need to craft the perfect cup at home.</p>
-                        <a href="equipment.html" class="btn btn--secondary">Shop Equipment</a>
+                    <article class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stars" aria-label="5 star rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Attended the latte art workshop and it was fantastic. The instructors are knowledgeable and passionate. Can't wait for the next event!"</p>
+                        <p class="testimonial-author">- James O'Connor</p>
                     </article>
-                    <article class="highlight-card reveal-child">
-                        <h3 class="highlight-card__title">Events & Workshops</h3>
-                        <p class="highlight-card__text">Join our coffee tasting sessions, brewing classes, and meet-the-roaster events.</p>
-                        <a href="events.html" class="btn btn--secondary">See Events</a>
+                    <article class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stars" aria-label="5 star rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Best coffee shop in the city. The atmosphere is warm, the staff are friendly, and the single-origin selection is unmatched."</p>
+                        <p class="testimonial-author">- Priya Sharma</p>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section id="featured" class="section section--alt" aria-label="Featured items">
+        <!-- Newsletter -->
+        <section class="newsletter">
             <div class="container">
-                <h2 class="section__title">Featured This Month</h2>
-                <div class="featured-grid">
-                    <article class="featured-card reveal-child">
-                        <div class="featured-card__media">
-                            <img src="images/slideshow/slide-1.jpg" alt="Ethiopian Yirgacheffe single origin coffee bag" width="600" height="400" loading="lazy">
-                        </div>
-                        <div class="featured-card__body">
-                            <h3 class="featured-card__title">Ethiopian Yirgacheffe</h3>
-                            <p class="featured-card__text">Bright, floral, and complex - our newest single origin.</p>
-                            <a href="coffee.html" class="btn btn--primary">View Details</a>
-                        </div>
-                    </article>
-                    <article class="featured-card reveal-child">
-                        <div class="featured-card__media">
-                            <img src="images/slideshow/slide-2.jpg" alt="Professional espresso machine on display" width="600" height="400" loading="lazy">
-                        </div>
-                        <div class="featured-card__body">
-                            <h3 class="featured-card__title">New Equipment Arrivals</h3>
-                            <p class="featured-card__text">Upgrade your home brewing setup with our latest equipment.</p>
-                            <a href="equipment.html" class="btn btn--primary">Shop Equipment</a>
-                        </div>
-                    </article>
-                    <article class="featured-card reveal-child">
-                        <div class="featured-card__media">
-                            <img src="images/slideshow/slide-3.jpg" alt="Coffee brewing workshop with instructor and students" width="600" height="400" loading="lazy">
-                        </div>
-                        <div class="featured-card__body">
-                            <h3 class="featured-card__title">Brewing Workshop</h3>
-                            <p class="featured-card__text">Learn the art of pour-over coffee at our next workshop.</p>
-                            <a href="events.html" class="btn btn--primary">Register Now</a>
-                        </div>
-                    </article>
-                    <article class="featured-card reveal-child">
-                        <div class="featured-card__media">
-                            <img src="images/slideshow/slide-4.jpg" alt="Special seasonal coffee blend gift packaging" width="600" height="400" loading="lazy">
-                        </div>
-                        <div class="featured-card__body">
-                            <h3 class="featured-card__title">Seasonal Blend</h3>
-                            <p class="featured-card__text">A warm, spiced blend perfect for the autumn season.</p>
-                            <a href="coffee.html" class="btn btn--primary">Order Now</a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="testimonials" class="section section--alt">
-            <div class="container">
-                <blockquote class="testimonial">
-                    <p class="testimonial__text">Bean Boutique has completely changed my morning routine. The Ethiopian Yirgacheffe is absolutely divine - bright, fruity, and complex.</p>
-                    <footer class="testimonial__footer">
-                        <cite class="testimonial__cite">Sarah M., Regular Customer</cite>
-                        <div class="testimonial__stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    </footer>
-                </blockquote>
-            </div>
-        </section>
-
-        <section id="instagram-feed" class="section" aria-label="Instagram feed">
-            <div class="container">
-                <h2 class="section__title">Follow Us on Instagram</h2>
-                <p class="section__subtitle">Share your Bean Boutique moments with <strong>#BeanBoutique</strong></p>
-                <div class="instagram-grid">
-                    <figure class="instagram-grid__item">
-                        <img src="images/placeholder/image-coming-soon.jpg" alt="Bean Boutique Instagram post - latte art" width="300" height="300" loading="lazy">
-                    </figure>
-                    <figure class="instagram-grid__item">
-                        <img src="images/placeholder/image-coming-soon.jpg" alt="Bean Boutique Instagram post - coffee beans" width="300" height="300" loading="lazy">
-                    </figure>
-                    <figure class="instagram-grid__item">
-                        <img src="images/placeholder/image-coming-soon.jpg" alt="Bean Boutique Instagram post - brewing equipment" width="300" height="300" loading="lazy">
-                    </figure>
-                    <figure class="instagram-grid__item">
-                        <img src="images/placeholder/image-coming-soon.jpg" alt="Bean Boutique Instagram post - shop interior" width="300" height="300" loading="lazy">
-                    </figure>
-                </div>
-                <a href="https://www.instagram.com/" class="btn btn--secondary" target="_blank" rel="noopener noreferrer">View More on Instagram</a>
-            </div>
-        </section>
-
-        <section id="location" class="section section--alt" aria-label="Our location">
-            <div class="container">
-                <h2 class="section__title">Find Us</h2>
-                <div class="location__grid">
-                    <div class="location__info">
-                        <address>
-                            <p><strong>Bean Boutique Coffee Shop</strong></p>
-                            <p>123 Coffee Lane</p>
-                            <p>Bean Town, BT1 2AB</p>
-                            <p>Phone: <a href="tel:+441234567890">(0123) 456-7890</a></p>
-                            <p>Email: <a href="mailto:hello@beanboutique.com">hello@beanboutique.com</a></p>
-                        </address>
-                        <h3>Opening Hours</h3>
-                        <table class="location__hours">
-                            <caption class="sr-only">Opening hours for Bean Boutique Coffee Shop</caption>
-                            <tbody>
-                                <tr><th scope="row">Monday - Friday</th><td>7:00 AM - 7:00 PM</td></tr>
-                                <tr><th scope="row">Saturday</th><td>8:00 AM - 6:00 PM</td></tr>
-                                <tr><th scope="row">Sunday</th><td>9:00 AM - 5:00 PM</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.3!2d-0.1246!3d51.5074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDMwJzI2LjYiTiAwwrAwNycyOC42Ilc!5e0!3m2!1sen!2suk!4v1234567890" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Bean Boutique Coffee Shop location on Google Maps"></iframe>
-                    </div>
-                </div>
+                <h2 class="section-title" data-aos="fade-up">Stay Caffeinated</h2>
+                <p class="section-subtitle" data-aos="fade-up" style="color: rgba(255,255,255,0.9);">Subscribe for exclusive offers, brewing tips, and event updates.</p>
+                <form class="newsletter-form" id="newsletterForm" data-aos="fade-up">
+                    <label for="newsletterEmail" class="visually-hidden">Email address</label>
+                    <input type="email" id="newsletterEmail" name="email" placeholder="Enter your email address" required aria-required="true">
+                    <button type="submit" class="btn btn-secondary">Subscribe</button>
+                </form>
             </div>
         </section>
     </main>
 
-    <dialog id="welcome-modal" class="modal" aria-labelledby="modal-title" aria-modal="true">
-        <div class="modal__content">
-            <button id="modal-close" class="modal__close" aria-label="Close discount offer" type="button"><i class="ph-bold ph-x"></i></button>
-            <div class="modal__body">
-                <h2 id="modal-title" class="modal__title">Welcome to Bean Boutique!</h2>
-                <p class="modal__text">Sign up for our newsletter and get <strong>15% off</strong> your first order!</p>
-                <form id="modal-form" class="modal__form" action="#" method="post">
-                    <label for="modal-email" class="modal__label">Email Address</label>
-                    <input type="email" id="modal-email" name="email" class="modal__input" required aria-required="true" placeholder="your@email.com" aria-describedby="modal-email-help">
-                    <span id="modal-email-help" class="sr-only">We will never share your email</span>
-                    <button type="submit" class="btn btn--primary btn--full">Get My 15% Off</button>
-                </form>
-                <button id="modal-dismiss" class="btn btn--link" type="button">No thanks, I will browse</button>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3><i class="fas fa-mug-hot"></i> Bean Boutique</h3>
+                <p>Crafting exceptional coffee experiences since 2018. We source ethically, roast carefully, and brew with passion.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="coffee.html">Coffee Selection</a></p>
+                <p><a href="equipment.html">Brewing Equipment</a></p>
+                <p><a href="events.html">Events & Workshops</a></p>
+                <p><a href="offers.html">Special Offers</a></p>
+                <p><a href="cart.html">Shopping Cart</a></p>
+            </div>
+            <div class="footer-col">
+                <h3>Opening Hours</h3>
+                <p>Monday - Friday: 7:00 AM - 7:00 PM</p>
+                <p>Saturday: 8:00 AM - 8:00 PM</p>
+                <p>Sunday: 9:00 AM - 5:00 PM</p>
+                <p>Bank Holidays: 9:00 AM - 4:00 PM</p>
+            </div>
+            <div class="footer-col">
+                <h3>Visit Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 42 Brew Street, Coffee Quarter</p>
+                <p><i class="fas fa-city"></i> London, EC1A 1BB</p>
+                <p><i class="fas fa-phone"></i> +44 (0)20 7946 0958</p>
+                <p><i class="fas fa-envelope"></i> hello@beanboutique.com</p>
+                <!-- Google Maps Plugin -->
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.432383990807!2d-0.127758384229327!3d51.50735097963553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604c38c8cd1d9%3A0xb78f2474b9a45aa9!2sLondon!5e0!3m2!1sen!2suk!4v1699999999999!5m2!1sen!2suk" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Bean Boutique location on Google Maps">
+                    </iframe>
+                </div>
             </div>
         </div>
-    </dialog>
-
-    <footer id="footer" class="footer">
-        <div class="container footer__inner">
-            <div class="footer__section">
-                <h3 class="footer__heading">About Us</h3>
-                <p class="footer__text">Bean Boutique - Your neighbourhood coffee shop bringing artisanal coffee to your cup since 2020.</p>
-                <address class="footer__address">
-                    <p>123 Coffee Lane, Bean Town, BT1 2AB</p>
-                    <p>Phone: <a href="tel:+441234567890">(0123) 456-7890</a></p>
-                    <p>Email: <a href="mailto:hello@beanboutique.com">hello@beanboutique.com</a></p>
-                </address>
-                <nav aria-label="Footer navigation" class="footer__links">
-                    <a href="index.html">Home</a>
-                    <a href="coffee.html">Coffee</a>
-                    <a href="equipment.html">Equipment</a>
-                    <a href="events.html">Events</a>
-                    <a href="offers.html">Offers</a>
-                    <a href="cart.html">Cart</a>
-                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
-                    <a href="#" aria-label="Follow us on Facebook">Facebook</a>
-                    <a href="#" aria-label="Follow us on Twitter">Twitter</a>
-                </nav>
-            </div>
-            <div class="footer__section">
-                <h3 class="footer__heading">Newsletter</h3>
-                <form class="footer__newsletter" id="newsletterForm" action="#" method="post">
-                    <label for="footer-email" class="sr-only">Email address</label>
-                    <input type="email" id="footer-email" name="email" placeholder="Your email address" required aria-required="true">
-                    <button type="submit" class="btn btn--primary btn--sm">Subscribe</button>
-                </form>
-            </div>
-        </div>
-        <div class="footer__bottom">
-            <div class="container">
-                <small>&copy; 2026 Bean Boutique Coffee Shop. All rights reserved.</small>
-            </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bean Boutique Coffee Shop. All rights reserved. | <a href="#" style="color: rgba(255,255,255,0.6);">Privacy Policy</a></p>
         </div>
     </footer>
 
-    <script src="js/main.js" defer></script>
-    <script src="js/slideshow.js" defer></script>
-    <script src="js/cart.js" defer></script>
-    <script src="js/modal.js" defer></script>
-    <script src="js/forms.js" defer></script>
+    <!-- Modal Popup - First Visit Discount -->
+    <div class="modal-overlay" id="discountModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <h2 id="modalTitle">Welcome to Bean Boutique!</h2>
+            <p>Join our coffee community and enjoy <strong>15% off</strong> your first order. Enter your email below to claim your discount.</p>
+            <form class="mt-2">
+                <div class="form-group">
+                    <label for="modalEmail">Email Address</label>
+                    <input type="email" id="modalEmail" name="email" placeholder="your@email.com" required aria-required="true">
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Claim My 15% Off</button>
+            </form>
+            <p class="mt-1" style="font-size: 0.85rem; color: var(--gray);">No spam, ever. Unsubscribe anytime.</p>
+        </div>
+    </div>
+
+    <!-- AOS Animation Plugin -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- External JavaScript -->
+    <script src="js/script.js"></script>
 </body>
 </html>
