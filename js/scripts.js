@@ -1,3 +1,7 @@
+/* ============================================
+   BEAN BOUTIQUE COFFEE SHOP
+   External JavaScript - script.js
+   ============================================ */
 
 // ---------- SLIDESHOW ----------
 let currentSlide = 0;
@@ -98,7 +102,7 @@ function addToCart(id, name, price, image) {
         cart.push({ id, name, price, image, qty: 1 });
     }
     saveCart();
-    
+
     const btn = document.querySelector(`button[data-id="${id}"]`);
     if (btn) {
         const originalText = btn.textContent;
@@ -131,9 +135,9 @@ function updateQuantity(id, change) {
 function renderCart() {
     const cartContainer = document.getElementById('cartItems');
     const cartTotal = document.getElementById('cartTotal');
-    
+
     if (!cartContainer) return;
-    
+
     if (cart.length === 0) {
         cartContainer.innerHTML = `
             <tr>
@@ -148,7 +152,7 @@ function renderCart() {
         if (cartTotal) cartTotal.textContent = 'Total: £0.00';
         return;
     }
-    
+
     let total = 0;
     cartContainer.innerHTML = cart.map(item => {
         const itemTotal = item.price * item.qty;
@@ -176,7 +180,7 @@ function renderCart() {
             </tr>
         `;
     }).join('');
-    
+
     if (cartTotal) cartTotal.textContent = `Total: £${total.toFixed(2)}`;
 }
 
@@ -191,7 +195,7 @@ if (searchInput) {
             const name = card.querySelector('.card-title').textContent.toLowerCase();
             const origin = card.querySelector('.card-origin')?.textContent.toLowerCase() || '';
             const notes = card.querySelector('.card-notes')?.textContent.toLowerCase() || '';
-            
+
             if (name.includes(term) || origin.includes(term) || notes.includes(term)) {
                 card.style.display = 'flex';
             } else {
@@ -210,12 +214,12 @@ if (eventForm) {
         const lastName = document.getElementById('lastName').value;
         const email = document.getElementById('email').value;
         const eventName = document.getElementById('eventName').value;
-        
+
         const subject = encodeURIComponent(`Event Registration: ${eventName}`);
-        const body = encodeURIComponent(`Name: ${firstName} ${lastName}\\nEmail: ${email}\\nEvent: ${eventName}`);
-        
+        const body = encodeURIComponent(`Name: ${firstName} ${lastName}\nEmail: ${email}\nEvent: ${eventName}`);
+
         window.location.href = `mailto:events@beanboutique.com?subject=${subject}&body=${body}`;
-        
+
         alert('Thank you for registering! Your email client should open shortly.');
         eventForm.reset();
     });
@@ -245,9 +249,9 @@ if (checkoutBtn) {
 
 // ---------- AOS INITIALIZATION ----------
 if (typeof AOS !== 'undefined') {
-    // AOS.init({
-//     duration: 800,
-//     once: true,
+    AOS.init({
+        duration: 800,
+        once: true,
         offset: 100
     });
 }
