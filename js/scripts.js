@@ -163,19 +163,19 @@ function renderCart() {
         total += itemTotal;
         return `
             <tr>
-                <td>
+                <td data-label="Product">
                     <img src="${item.image}" alt="${item.name}" class="cart-item-img">
                 </td>
-                <td><strong>${item.name}</strong></td>
-                <td>MWK ${formatMWK(item.price)}</td>
-                <td>
+                <td data-label="Name"><strong>${item.name}</strong></td>
+                <td data-label="Price">MWK ${formatMWK(item.price)}</td>
+                <td data-label="Quantity">
                     <div class="qty-control">
                         <button class="qty-btn" data-id="${item.id}" data-action="decrement">-</button>
                         <span>${item.qty}</span>
                         <button class="qty-btn" data-id="${item.id}" data-action="increment">+</button>
                     </div>
                 </td>
-                <td>
+                <td data-label="Total">
                     <strong>MWK ${formatMWK(itemTotal)}</strong>
                     <button class="qty-btn btn-remove" data-id="${item.id}" data-action="remove" aria-label="Remove item">
                         <i class="fas fa-trash"></i>
